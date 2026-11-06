@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path441" d="M0-682.665H20v20H0Z" transform="translate(0 682.665)" fill="#5f707c"/>
+    </clipPath>
+  </defs>
+  <g id="g435" transform="translate(0 682.665)">
+    <g id="g437" transform="translate(0 -682.665)">
+      <g id="g439" clip-path="url(#clip-path)">
+        <g id="g445" transform="translate(12.539 9.219)">
+          <path id="path447" d="M-189.476-25.1H-196v-1.563h6.523Z" transform="translate(196 26.667)" fill="#5f707c"/>
+        </g>
+        <g id="g449" transform="translate(15.497 6.59)">
+          <path id="path451" d="M-36.607-188.226l-1.1-1.1,2.3-2.3-2.3-2.3,1.1-1.1,3.41,3.41Z" transform="translate(37.712 195.045)" fill="#5f707c"/>
+        </g>
+        <g id="g453" transform="translate(0 18.438)">
+          <path id="path455" d="M-662.665-25.1h-20v-1.562h20Z" transform="translate(682.665 26.667)" fill="#5f707c"/>
+        </g>
+        <g id="g457" transform="translate(12.539 12.344)">
+          <path id="path459" d="M-25.1-19.049h-1.563v-7.617H-25.1Z" transform="translate(26.667 26.667)" fill="#5f707c"/>
+        </g>
+        <g id="g461" transform="translate(0 0)">
+          <path id="path463" d="M-25.1-633.41h-1.562v-17.578a2.346,2.346,0,0,1,2.344-2.344h9.414a2.346,2.346,0,0,1,2.344,2.344v5.313h-1.562v-5.312a.782.782,0,0,0-.781-.781h-9.414a.782.782,0,0,0-.781.781Z" transform="translate(26.667 653.332)" fill="#5f707c"/>
+        </g>
+        <g id="g465" transform="translate(4.219 0)">
+          <path id="path467" d="M-197.242-634.7H-198.8v-17.617a.782.782,0,0,0-.781-.781H-204v-1.562h4.414a2.346,2.346,0,0,1,2.344,2.344Z" transform="translate(203.999 654.665)" fill="#5f707c"/>
+        </g>
+        <g id="g469" transform="translate(6.328 9.219)">
+          <path id="path471" d="M-50.476-25.238a.762.762,0,0,1-.762.762A.762.762,0,0,1-52-25.238.762.762,0,0,1-51.238-26a.762.762,0,0,1,.762.762" transform="translate(52 26)" fill="#5f707c"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

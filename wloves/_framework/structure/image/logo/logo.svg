@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="27" height="30" viewBox="0 0 27 30">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.382" y1="-0.023" x2="0.657" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0087ff"/>
+      <stop offset="0.122" stop-color="#187ae6"/>
+      <stop offset="0.38" stop-color="#5659a8"/>
+      <stop offset="0.749" stop-color="#b82546"/>
+      <stop offset="1" stop-color="red"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_83837" data-name="Group 83837" transform="translate(-21.001 -10)">
+    <g id="LOGO" transform="translate(-486.959 -160)">
+      <rect id="Rectangle_99146" data-name="Rectangle 99146" width="27" height="30" transform="translate(507.96 170)" fill="none"/>
+      <path id="Intersection_2" data-name="Intersection 2" d="M12.6,28.6V5.271h1.47V28.6Zm2.517-2.839V3.175h1.472V25.762Zm-5.038,0V3.175h1.472V25.762ZM17.635,22.1V0h1.472V22.1Zm-10.08,0V0H9.029V22.1Zm12.6-1.735V3.175h1.475v17.19Zm-15.113,0V3.175h1.47v17.19Zm17.707-2.62V7.922h1.47v9.823Zm-20.3,0V7.922H3.919v9.823Zm22.747-3.39V10.917h1.472v3.439ZM0,14.356V10.917H1.471v3.439Z" transform="translate(507.998 170.667)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="Subtraction_1" data-name="Subtraction 1" d="M5,9A4.016,4.016,0,0,1,1.535,7h6.93A4.015,4.015,0,0,1,5,9Z" transform="translate(28.67 14.072) rotate(30)" fill="#fff"/>
+    <path id="Subtraction_2" data-name="Subtraction 2" d="M3.465,0A4.016,4.016,0,0,0,0,2H6.93A4.015,4.015,0,0,0,3.465,0Z" transform="translate(43 22.633) rotate(150)" fill="#fff"/>
+  </g>
+</svg>

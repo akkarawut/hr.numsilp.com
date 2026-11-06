@@ -1,0 +1,26 @@
+{
+  "add_new_user": {
+    "en": "Add new user",
+    "th": "เพิ่มผู้ใช้งาน"
+  },
+  "user_info": {
+    "en": "User's Information",
+    "th": "ข้อมูลผู้ใช้งาน"
+  },
+  "user_acc": {
+    "en": "User Account",
+    "th": "บัญชีผู้ใช้"
+  },
+  "account_info_access_system": {
+    "en": "Account information for access the system",
+    "th": "ข้อมูลบัญชีสำหรับการเข้าใช้งานระบบ"
+  },
+  "account_rights_access_system": {
+    "en": "Access rights for access the system",
+    "th": "สิทธิการเข้าใช้งานระบบ"
+  },
+  "del_user_1": {
+    "en": "Do you want to remove {{name}} from that system ?",
+    "th": "คุณต้องการลบ {{name}} ออกจากระบบใช่หรือไม่ ?"
+  }
+}

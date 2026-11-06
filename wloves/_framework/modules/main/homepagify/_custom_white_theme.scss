@@ -1,0 +1,37 @@
+.btn-search  {
+  width: 35px !important;
+  background: url("image/filter_dark.svg") no-repeat center;
+  &.active {
+   background: url("image/filter_active.svg") no-repeat center;
+  }
+}
+.container-pagination {
+  .table-responsive {
+    table.table {
+      tbody {
+        tr {
+          &.title-group td {
+            .btn-toggle {
+              font-size: 14px;
+              &.transform-img {
+                p {
+                  &::before {
+                    content:url("image/angle-down-dark.svg");
+                  }
+                }
+              }
+            
+              p {
+                margin-bottom: 0;
+                &::before {
+                  content:url("image/angle-up-dark.svg");
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

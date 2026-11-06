@@ -1,0 +1,208 @@
+<?php
+$user_permission['_permission'] = ['all', 'ywptz_user', 'niemz_user', 'bmiwk_user', 'noaxt_user', 'xacpn_user'];
+require_once 'wloves/_framework/import_for_website.php';
+require_once 'layout/init.php';
+require_once 'component/navtab.php';
+$name_page = 'ตั้งค่ารูปแบบเวลาทำงาน';
+$id = isset($_GET['id']) && $_GET['id'] ? $_GET['id'] : 0;
+$is_edit = isset($_GET['is_edit']) && $_GET['is_edit'] ? $_GET['is_edit'] : 0;
+$working_time = phr_setting_working_time::getSettingWorkingTimeByID(API_CODE, $id);
+$dropdown_working = phr_helper::dropdownWorkingTime(API_CODE, ['not_id' => $working_time['id']]);
+
+if ($_POST) {
+  if (isset($_POST['submit_update_working_time'])) {
+    unset($_POST['submit_update_working_time']);
+    $result = phr_setting_working_time::updateSettingWorkingTime(API_CODE, $working_time['id'], $_POST);
+    if ($result['response_status']) {
+      $redirect = 'working_time_detail.php?id=' . $working_time['id'];
+    }
+  } else if (isset($_POST['submit_delete_data'])) {
+    $to_id = isset($_POST['to_id']) && $_POST['to_id'] ? $_POST['to_id'] : '';
+    $result = phr_setting_working_time::deleteSettingWorkingTime(API_CODE, $working_time['id'], $to_id);
+    if ($result['response_status']) {
+      $redirect = 'setting_working_time.php';
+    }
+  }
+  W_Main::responseAPI(/*$result, $message, $redirect*/);
+}
+
+$arr_day = [
+  [
+    'name' => 'วันจันทร์',
+    'check_box_name' => 'monday',
+    'from_time' => 'monday_fromtime',
+    'to_time' => 'monday_totime',
+    'to_time' => 'monday_totime',
+    'hour' => 'monday_hour',
+    'minute' => 'monday_minute',
+  ],
+  [
+    'name' => 'วันอังคาร',
+    'check_box_name' => 'tuesday',
+    'from_time' => 'tuesday_fromtime',
+    'to_time' => 'tuesday_totime',
+    'hour' => 'tuesday_hour',
+    'minute' => 'tuesday_minute',
+  ],
+  [
+    'name' => 'วันพุธ',
+    'check_box_name' => 'wednesday',
+    'from_time' => 'wednesday_fromtime',
+    'to_time' => 'wednesday_totime',
+    'hour' => 'wednesday_hour',
+    'minute' => 'wednesday_minute',
+  ],
+  [
+    'name' => 'วันพฤหัสบดี',
+    'check_box_name' => 'thursday',
+    'from_time' => 'thursday_fromtime',
+    'to_time' => 'thursday_totime',
+    'hour' => 'thursday_hour',
+    'minute' => 'thursday_minute',
+  ],
+  [
+    'name' => 'วันศุกร์',
+    'check_box_name' => 'friday',
+    'from_time' => 'friday_fromtime',
+    'to_time' => 'friday_totime',
+    'hour' => 'friday_hour',
+    'minute' => 'friday_minute',
+  ],
+  [
+    'name' => 'วันเสาร์',
+    'check_box_name' => 'saturday',
+    'from_time' => 'saturday_fromtime',
+    'to_time' => 'saturday_totime',
+    'hour' => 'saturday_hour',
+    'minute' => 'saturday_minute',
+  ],
+  [
+    'name' => 'วันอาทิตย์',
+    'check_box_name' => 'sunday',
+    'from_time' => 'sunday_fromtime',
+    'to_time' => 'sunday_totime',
+    'hour' => 'sunday_hour',
+    'minute' => 'sunday_minute',
+  ],
+];
+
+?>
+<!-- MENU::ตั้งค่า_ตั้งค่ารูปแบบเวลา -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <?php
+  $og_data = [
+    'url'         => '',
+    'title'       => 'HR',
+    'image'       => '',
+    'description' => '',
+  ];
+  W_Structure::loadMetaForWebsite('', $og_data);
+  W_Main::loadAsset('assets/css/main.css');
+  ?>
+  <?php include_once 'layout/favicon.php' ?>
+</head>
+
+<body>
+  <?php include_once 'layout/navbar.php' ?>
+  <div id="hr-body">
+    <?php include_once 'layout/sidebar.php' ?>
+    <div id="hr-content" class="bg-white">
+      <div class="container-fluid mt-5">
+        <div class="max-w-750px mx-auto">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <div class="icon-back mr-10px">
+                <?php if ($is_edit) { ?>
+                  <a href="working_time_detail.php?id=<?= $id ?>"> <?= file_get_contents('assets/icons/icon-left-arrow.svg') ?></a>
+                <?php } else { ?>
+                  <a href="setting_working_time.php"> <?= file_get_contents('assets/icons/icon-left-arrow.svg') ?></a>
+                <?php } ?>
+              </div>
+              <h1 class="title-header m-0">รายละเอียดรูปแบบเวลาทำงาน</h1>
+            </div>
+            <?php if (!$is_edit) { ?>
+              <div class="icon-action">
+                <div class="d-flex">
+                  <a href="working_time_detail.php?id=<?= $id ?>&is_edit=1" class="btn btn-c-icon circle btn-c-primary">
+                    <?= file_get_contents('assets/icons/pencil.svg') ?>
+                  </a>
+                  <button type="button" class="btn btn-c-icon circle btn-c-danger" <?php Tiwdal::register('delete_data', $working_time); ?>>
+                    <?= file_get_contents('assets/icons/delete.svg') ?>
+                  </button>
+                </div>
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+
+      <?php if ($is_edit) { ?>
+        <?php include_once 'view/setting/working_time/form_edit.php' ?>
+      <?php } else {  ?>
+        <?php include_once 'view/setting/working_time/form_detail.php' ?>
+      <?php } ?>
+    </div>
+
+    <?php Tiwdal::startModal('delete_data', 'modal-md modal-dialog-centered mx-auto  max-w-500px'); ?>
+    <form action="" method="post">
+      <div class="modal-header justify-content-center">
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span class="font-18px" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body px-20px m-auto max-w-450px pt-0">
+        <div class="font-24px font-SemiBold  text-center mb-15px"><?= Ty::get(['ลบข้อมูลรูปแบบเวลาทำงาน', '']) ?></div>
+        <div class="text-center">
+          <div>
+            คุณแน่ใจหรือไม่ที่จะลบข้อมูลรูปแบบเวลาทำงาน นี้ออกจากระบบ <br>
+            คุณจำเป็นต้องย้ายข้อมูลพนักงานที่ใช้รูปแบบการทำงานนี้ <br>
+            ไปยังรูปแบบการทำงานอื่นก่อน
+          </div>
+        </div>
+
+        <div class="alert-noti my-20px">
+          <div class="me-3">
+            <?= file_get_contents('assets/icons/alert-danger.svg') ?>
+          </div>
+          <div>
+            มีพนักงาน <?= $working_time['count_user'] ?> รายใช้รูปแบบการทำงานนี้
+          </div>
+        </div>
+
+        <div class="font-15px fw-semibold">ย้ายไปยังรูปแบบการทำงานอื่น</div>
+        <div class="font-14px text-danger">* ระบบจะย้ายข้อมูลให้หลังจากคุณยืนยันที่จะลบ</div>
+
+        <div class="hr-form-control mt-15px">
+          <div class="input-group">
+            <div class="input-title required">ชื่อรูปแบบ</div>
+            <select name="to_id" class="input" required>
+              <option value="" selected disabled>เลือก</option>
+              <?php foreach ($dropdown_working as $working) { ?>
+                <option value="<?= $working['id'] ?>"><?= $working['title'] ?></option>
+              <?php } ?>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <input type="hidden" name="{id}">
+        <?php
+        TiwForm::normal('btn', '', ['name' => '', 'type' => 'button', 'class' => 'btn-close-modal min-w-90px', 'data-bs-dismiss' => 'modal'], ['text' => Ty::get(['ยกเลิก', ''])]);
+        TiwForm::normal('btn', '', ['name' => 'submit_delete_data', 'type' => 'submit', 'class' => 'btn-danger min-w-120px'], ['text' => Ty::get(['ลบข้อมูล', ''])]);
+        ?>
+      </div>
+    </form>
+    <?php Tiwdal::endModal(); ?>
+    <?php
+    W_Structure::loadFooterForWebsite();
+    W_Main::loadAsset('assets/js/main.js');
+    W_Main::loadAsset('assets/js/working_time.js');
+    ?>
+</body>
+
+</html>

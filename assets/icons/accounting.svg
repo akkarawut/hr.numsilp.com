@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="accounting" transform="translate(-2 -2)">
+    <path id="Path_53" data-name="Path 53" d="M26.4,27.2H21.07a2,2,0,0,1-2-2V17.87a2,2,0,0,1,2-2H26.4a2,2,0,0,1,2,2V25.2A2,2,0,0,1,26.4,27.2Zm-5.331-10a.669.669,0,0,0-.669.669V25.2a.669.669,0,0,0,.669.669H26.4a.669.669,0,0,0,.669-.669V17.87A.669.669,0,0,0,26.4,17.2Z" transform="translate(-6.401 -5.201)" fill="#768ca8"/>
+    <path id="Path_54" data-name="Path 54" d="M23.33,20.13h4v1.331h-4Z" transform="translate(-7.999 -6.799)" fill="#768ca8"/>
+    <path id="Path_55" data-name="Path 55" d="M23.33,24.4h1.331v1.331H23.33Z" transform="translate(-7.999 -8.4)" fill="#768ca8"/>
+    <path id="Path_56" data-name="Path 56" d="M27.6,24.4h1.331v1.331H27.6Z" transform="translate(-9.6 -8.4)" fill="#768ca8"/>
+    <path id="Path_57" data-name="Path 57" d="M23.33,27.6h1.331v1.331H23.33Z" transform="translate(-7.999 -9.6)" fill="#768ca8"/>
+    <path id="Path_58" data-name="Path 58" d="M27.6,27.6h1.331v1.331H27.6Z" transform="translate(-9.6 -9.6)" fill="#768ca8"/>
+    <path id="Path_59" data-name="Path 59" d="M11.331,22H4a1.987,1.987,0,0,1-1.412-.587A2.013,2.013,0,0,1,2,20V4a2.012,2.012,0,0,1,.588-1.413A1.987,1.987,0,0,1,4,2H16a2,2,0,0,1,2,2V9.331H16.669V4A.669.669,0,0,0,16,3.331H4A.669.669,0,0,0,3.331,4V20A.669.669,0,0,0,4,20.669h7.331Z" fill="#768ca8"/>
+    <path id="Path_60" data-name="Path 60" d="M6.27,7.33h4.444V8.661H6.27Z" transform="translate(-1.601 -1.999)" fill="#768ca8"/>
+    <path id="Path_61" data-name="Path 61" d="M6.27,12.67h6.669V14H6.27Z" transform="translate(-1.601 -4.001)" fill="#768ca8"/>
+    <path id="Path_62" data-name="Path 62" d="M6.27,18h6.669v1.331H6.27Z" transform="translate(-1.601 -6)" fill="#768ca8"/>
+    <path id="Path_63" data-name="Path 63" d="M6.27,23.33H9.976v1.331H6.27Z" transform="translate(-1.601 -7.999)" fill="#768ca8"/>
+    <path id="Path_64" data-name="Path 64" d="M14.8,23.33h1.331v1.331H14.8Z" transform="translate(-4.8 -7.999)" fill="#768ca8"/>
+  </g>
+</svg>

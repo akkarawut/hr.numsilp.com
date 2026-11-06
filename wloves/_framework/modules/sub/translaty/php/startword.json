@@ -1,0 +1,10 @@
+{
+  "test": {
+    "en": "Test",
+    "th": "ทดลอง"
+  },
+  "test_with_value": {
+    "en": "Test{{key}}",
+    "th": "ทดลอง{{key}}"
+  }
+}

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@200;300;400;500;600;700;800&display=swap");
+// font family
+$font_Sarabun: "Sarabun", sans-serif;
+
+$spaces_sizes: 1px, 2px, 3px, 4px, 5px, 7px, 8px, 9px, 10px, 11px, 12px, 13px,
+  14px, 15px, 20px, 25px, 30px, 35px, 38px, 40px, 45px, 50px, 55px, 60px, 65px,
+  70px, 75px, 80px, 85px, 90px, 95px, 100px, 105px, 110px, 120px, 130px, 140px,
+  150px, 160px, 170px, 180px, 190px, 200px, 220px, 250px, 270px, 300px, 350px, 380px, 400px, 500px,
+  600px, 650px, 700px, 760px, 800px, 900px, 1000px, 1100px, 1200px, 1300px, 1400px, 1500px, 1600px, 1700px, 1800px, 1900px, 2000px;
+
+$font_weights_name: "Thin", "ExtraLight", "Light", "Regular", "Medium",
+  "SemiBold", "Bold", "ExtraBold";
+
+$font_weights: 100, 200, 300, 400, 500, 600, 700, 800;
+
+$font_sizes: 2px, 3px, 4px, 5px, 6px, 7px, 8px, 9px, 10px, 11px, 12px, 13px,
+  14px, 15px, 16px, 17px, 18px, 19px, 20px, 21px, 22px, 23px, 24px, 25px, 26px,
+  27px, 28px, 29px, 30px, 35px, 36px, 40px, 45px, 50px, 55px, 60px, 65px, 70px, 80px,
+  90px, 100px;
+
+// Equalize font weight on MAC
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+}

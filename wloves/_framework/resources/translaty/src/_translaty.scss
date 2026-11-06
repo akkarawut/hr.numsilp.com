@@ -1,0 +1,417 @@
+&:root {
+  --bg-color: #EEEEED;
+  --bg-card: #FBFBFB;
+  --bg-card-optional-1: #D5D5D5;
+  --bg-card-optional-2: #DEDEDE;
+  --bg-card-navbar: #E6E6E6;
+  --bg-card-back: #DADEE3;
+  --bg-table: #F7F7F7;
+  --bg-table-hover: #E6E6E6;
+  --bg-hover-optional-1: #F5F5F5;
+  --bg-hover-optional-2: #EAEAEA;
+  --color-line: #DADEE3;
+  --color-field: #D0D6DD;
+  --color-field-active: #5C9CFF;
+  --color-info: #3A4248;
+  --color-secondary: #58606E;
+  --color-place-holder: #9CA2A8;
+  --color-primary: #3E88FB;
+  --color-success: #0BAA22;
+  --color-warning: #FFBD3A;
+  --color-danger: #FE635B;
+  --color-light: #E6E6E6;
+  --color-dark: #000000;
+  --color-sub-table: #F2F2F2;
+  --color-active-table: #DAE7FB;
+  --color-search-border: #CED2D5;
+  --color-dark-or-light: #ffffff;
+  --v2-color-text-info: #202125;
+  --v2-color-text-secondary: #676A6F;
+  --v2-color-text-placeholder: #979898;
+  --v2-color-border-input: #B3D7FF;
+  --v2-color-select-input: #E3F5FF;
+  --v2-color-hover: #ECF3F7;
+  --v2-color-border: #DBDCDF;
+  --v2-color-bg-card: #FFFFFF;
+  --v2-color-bg: #F1F3F4;
+  --v2-color-optional-1: #C8E9FC;
+  --v2-color-table-secondary: #F8F8F8;
+  --v2-color-table-disable: #EDEDED;
+  --v2-color-info: #202125;
+  --v2-color-info-hover: #3A4248;
+  --v2-color-secondary: #676A6F;
+  --v2-color-secondary-hover: #58606E;
+  --v2-color-primary: #3872E1;
+  --v2-color-primary-a: #3872E1ac;
+  --v2-color-primary-hover: #004EE2;
+  --v2-color-success: #1FA700;
+  --v2-color-success-a: #1FA700ac;
+  --v2-color-success-hover: #198B00;
+  --v2-color-warning: #FFAD00;
+  --v2-color-warning-hover: #FFC400;
+  --v2-color-danger: #ED4234;
+  --v2-color-danger-hover: #DE1100;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.toast {
+  background-color: white !important;
+  color: #000 !important;
+}
+
+#translaty_content {
+
+  color: rgb(50, 50, 50);
+
+  .form-btn {
+    min-width: 120px;
+    min-height: 45px;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  .color-white {
+    color: white;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+  .btn-success {
+    color: #FFFFFF;
+    background-color: #1FA700;
+    border-color: #1FA700;
+  }
+
+  .btn-warning {
+    color: #FFFFFF;
+    background-color: #FFAD00;
+    border-color: #FFAD00;
+  }
+
+  .btn-primary {
+    color: #FFFFFF;
+    background-color: #3872E1;
+    border-color: #3872E1;
+  }
+
+  .btn-danger {
+    color: #FFFFFF;
+    background-color: #ED4234;
+    border-color: #ED4234;
+  }
+
+  .icon-30px {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+    &:hover {
+      filter: grayscale(50%);
+    }
+  }
+
+  .min-w-140px {
+    min-width: 140px;
+  }
+
+  .btn-translaty-panel {
+    margin-left: 5px;
+    margin-top: 5px;
+    // position: fixed;
+    // right: 10px;
+    // top: calc(60vh - 40px);
+    // z-index: 99;
+
+    // &.d-none {
+    //   display: none;
+    // }
+    :hover svg {
+      fill: gray;
+    }
+
+    &.install svg {
+      fill: yellowgreen;
+    }
+
+    &.install:hover svg {
+      fill: green;
+    }
+  }
+
+  .modal-translaty {
+    // position: fixed;
+    // margin-left: 15%;
+    // margin-top: 5vh;
+    // width: 70%;
+    // height: 90vh;
+    background-color: #ffffff;
+    border-radius: 20px;
+    z-index: 1039;
+    padding: 20px;
+
+
+  }
+
+  .container-pagination .header-pagination {
+    color: rgb(50, 50, 50) !important;
+  }
+
+  .table-overflow-y-scorll {
+    .table-responsive {
+      overflow-y: auto;
+      max-height: calc(100vh - 250px);
+      position: relative;
+      color: rgb(50, 50, 50) !important;
+
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: #ffffff;
+
+        th {
+          box-shadow: inset 0px -1px #CED2D5;
+          background-color: #CED2D5;
+
+          input,
+          select {
+            box-shadow: inset 0 1px #CED2D5, inset 0 -1px #CED2D5, 0 -0.5px 0.5px 1px #CED2D5;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          .bg-primary-ty {
+            background-color: #3873e12a;
+          }
+
+          .text-primary-ty {
+            color: #3873e1;
+          }
+
+          .bg-success-ty {
+            background-color: #1FA7002a;
+          }
+
+          .text-success-ty {
+            color: #1FA700;
+          }
+
+          &.even-tr {
+            background-color: #f6f6f6;
+          }
+        }
+      }
+    }
+  }
+
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .btn-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    opacity: .5;
+
+    svg {
+      path {
+        fill: white;
+      }
+
+    }
+  }
+
+  .modal-backdrop-translaty {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1038;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+  }
+
+  .vertical-align-center {
+    vertical-align: middle;
+  }
+
+  // for notification up to modal
+  .fixed-bottom {
+    z-index: 2000;
+  }
+
+  .event-notification-copy {
+    position: fixed;
+    bottom: 100px;
+    left: calc(50% - 50px);
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 150px;
+    padding: 20px 10px;
+    z-index: 2000;
+    text-align: center;
+  }
+
+  .modal-content {
+    background-color: #fff !important;
+  }
+
+  .form-text {
+    width: 100%;
+    min-height: 40px;
+    height: 40px;
+    color: #202125;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 5px;
+    border-bottom: 1px solid #B3D7FF;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    transition: all 0.1s;
+  }
+
+  .btn-close-modal {
+    background-color: #ED4234;
+    color: #FFFFFF;
+  }
+
+  .container-pagination .header-pagination {
+    background-color: #DADEE3;
+  }
+
+  .select-module {
+    display: flex;
+    margin: 0 5px;
+  }
+}
+
+//? table w3
+.myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th,
+#myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+// checkbox
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 10px;
+  top: 5px;
+  width: 5px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

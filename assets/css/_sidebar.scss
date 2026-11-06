@@ -1,0 +1,82 @@
+#hr-sidebar[data-collapse="true"] {
+  transform: translateX(0);
+}
+
+.main-sidebar {
+  color: #1D1D1D;
+  padding: 20px 0px 30px 30px;
+  background-color: #fff;
+  height: calc(100dvh - 62px);
+  // height: calc(100dvh - 180px);
+  overflow: auto;
+  position: relative;
+
+  & .title {
+    // font-size: 1.4rem;
+    // font-weight: 500;
+    // margin-bottom: 10px;
+    // padding: 10px 15px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    padding: 5px 15px;
+    color: #3872e1;
+  }
+
+  .sub-sidebar {
+    margin-bottom: 5px;
+
+    .menu {
+      &.active {
+        .menu-link {
+          background-color: #C2E7FF;
+        }
+      }
+
+      // display: flex;
+      .menu-link {
+        display: flex;
+        align-items: center;
+        color: #1D1D1D;
+        padding: 15px;
+        background-color: #fff;
+        transition: all 0.3s ease-in-out;
+        border-radius: 10px;
+
+        &:hover {
+          background-color: #C2E7FF;
+        }
+      }
+
+      & ._icon {
+        margin-right: 10px;
+
+        svg {
+          width: 20px;
+          height: 20px;
+
+          & path {
+            fill: #1D1D1D;
+          }
+        }
+      }
+
+      & ._name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.menu-sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  bottom: 0;
+  background: #fff;
+  width: 300px;
+  left: 0;
+  padding-left: 30px;
+}

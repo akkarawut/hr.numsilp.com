@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="company" transform="translate(-2 -2)">
+    <path id="Path_86" data-name="Path 86" d="M21.219,4.787,20.75,3.012A1.331,1.331,0,0,0,19.5,2H13.875a1.331,1.331,0,0,0-1.312,1.012l-.444,1.781A1.331,1.331,0,0,0,11.331,6v4H4a2,2,0,0,0-2,2v9.331A.669.669,0,0,0,2.669,22H21.331A.669.669,0,0,0,22,21.331V6a1.331,1.331,0,0,0-.781-1.213ZM19.5,3.331l.331,1.331H13.519l.356-1.331ZM3.331,12A.669.669,0,0,1,4,11.331h7.331v2h-6v1.331h6v2h-6V18h6v2.669h-8Zm17.337,8.669h-8V6h8Z" transform="translate(0 0)" fill="#768ca8"/>
+    <path id="Path_87" data-name="Path 87" d="M26.53,11.6h1.331v2.669H26.53Z" transform="translate(-9.199 -3.6)" fill="#768ca8"/>
+    <path id="Path_88" data-name="Path 88" d="M22.27,11.6H23.6v2.669H22.27Z" transform="translate(-7.601 -3.6)" fill="#768ca8"/>
+    <path id="Path_89" data-name="Path 89" d="M26.53,19.07h1.331v2.669H26.53Z" transform="translate(-9.199 -6.401)" fill="#768ca8"/>
+    <path id="Path_90" data-name="Path 90" d="M22.27,19.07H23.6v2.669H22.27Z" transform="translate(-7.601 -6.401)" fill="#768ca8"/>
+  </g>
+</svg>

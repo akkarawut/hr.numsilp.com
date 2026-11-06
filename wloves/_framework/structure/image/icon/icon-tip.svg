@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13.201" height="18" viewBox="0 0 13.201 18">
+  <g id="lightbulb" transform="translate(-68.249 0)">
+    <path id="Path_105539" data-name="Path 105539" d="M302.081,173.256a.528.528,0,1,0-.528.528A.529.529,0,0,0,302.081,173.256Z" transform="translate(-224.592 -166.656)" fill="#ffbd3a"/>
+    <path id="Path_105540" data-name="Path 105540" d="M181.985,173.256a.528.528,0,1,0-.528.528A.529.529,0,0,0,181.985,173.256Z" transform="translate(-108.719 -166.656)" fill="#ffbd3a"/>
+    <path id="Path_105541" data-name="Path 105541" d="M240.976,232.775h1.056v5.6h-1.056Z" transform="translate(-166.655 -224.592)" fill="#ffbd3a"/>
+    <path id="Path_105542" data-name="Path 105542" d="M74.85,0a6.6,6.6,0,0,0-3.694,12.071v1.707h2.111v-5.6h-.528A1.584,1.584,0,1,1,74.23,7.129h1.238a1.583,1.583,0,1,1,1.492,1.055h-.528v5.6h2.111V12.071A6.6,6.6,0,0,0,74.85,0Z" fill="#ffbd3a"/>
+    <path id="Path_105543" data-name="Path 105543" d="M150.928,481.976h7.388v1.056h-7.388Z" transform="translate(-79.772 -465.032)" fill="#a5aabe"/>
+    <path id="Path_105544" data-name="Path 105544" d="M150.928,421.928h7.388v1.056h-7.388Z" transform="translate(-79.772 -407.095)" fill="#a5aabe"/>
+  </g>
+</svg>

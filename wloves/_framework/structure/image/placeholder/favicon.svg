@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_84145" data-name="Group 84145" transform="translate(-480 -345)">
+    <g id="Rectangle_102447" data-name="Rectangle 102447" transform="translate(480 345)" fill="#eaeaea" stroke="#dadee3" stroke-width="2" stroke-dasharray="5 5">
+      <rect width="50" height="50" rx="5" stroke="none"/>
+      <rect x="1" y="1" width="48" height="48" rx="4" fill="none"/>
+    </g>
+    <path id="cloud-computing_2_" data-name="cloud-computing (2)" d="M19.1,4.284A8.118,8.118,0,0,0,3.964,6.607a4.853,4.853,0,0,0,.89,9.625h6.914V10.088L10.216,11.64A.732.732,0,1,1,9.18,10.6l2.8-2.8a.732.732,0,0,1,1.036,0l2.8,2.8a.732.732,0,1,1-1.036,1.036l-1.552-1.552v6.144h5.793A5.974,5.974,0,0,0,19.1,4.284Zm0,0" transform="translate(493 362)" fill="#9ca2a8"/>
+  </g>
+</svg>

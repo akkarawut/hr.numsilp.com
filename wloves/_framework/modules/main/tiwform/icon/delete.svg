@@ -1,0 +1,19 @@
+<svg id="Component_20_28" data-name="Component 20 – 28" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <rect id="Rectangle_75486" data-name="Rectangle 75486" width="20" height="20" rx="5" fill="#3a4248"/>
+  <g id="add" transform="translate(10 -1.314) rotate(45)">
+    <g id="Group_59031" data-name="Group 59031" transform="translate(7.568 3)">
+      <g id="Group_59030" data-name="Group 59030">
+        <g id="Group_59029" data-name="Group 59029">
+          <path id="Path_81135" data-name="Path 81135" d="M30.932,13a.4.4,0,0,1-.432-.339V3.339a.444.444,0,0,1,.863,0v9.322A.4.4,0,0,1,30.932,13Z" transform="translate(-30.5 -3)" fill="#dadbe0" stroke="#dadbe0" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+    <g id="Group_59034" data-name="Group 59034" transform="translate(3 7.568)">
+      <g id="Group_59033" data-name="Group 59033">
+        <g id="Group_59032" data-name="Group 59032">
+          <path id="Path_81136" data-name="Path 81136" d="M12.661,31.363H3.339a.444.444,0,0,1,0-.863h9.322a.444.444,0,0,1,0,.863Z" transform="translate(-3 -30.5)" fill="#dadbe0" stroke="#dadbe0" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

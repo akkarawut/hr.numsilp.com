@@ -1,0 +1,15 @@
+<svg id="dial" xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+  <g id="Group_95386" data-name="Group 95386">
+    <g id="Group_95385" data-name="Group 95385">
+      <path id="Path_140153" data-name="Path 140153" d="M2.375,0A2.375,2.375,0,1,0,4.75,2.375,2.378,2.378,0,0,0,2.375,0Z" fill="#676a6f"/>
+      <path id="Path_140154" data-name="Path 140154" d="M2.375,192a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,2.375,192Z" transform="translate(0 -184.875)" fill="#676a6f"/>
+      <path id="Path_140155" data-name="Path 140155" d="M2.375,384a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,2.375,384Z" transform="translate(0 -369.75)" fill="#676a6f"/>
+      <path id="Path_140156" data-name="Path 140156" d="M194.375,0a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,194.375,0Z" transform="translate(-184.875)" fill="#676a6f"/>
+      <path id="Path_140157" data-name="Path 140157" d="M194.375,192a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,194.375,192Z" transform="translate(-184.875 -184.875)" fill="#676a6f"/>
+      <path id="Path_140158" data-name="Path 140158" d="M194.375,384a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,194.375,384Z" transform="translate(-184.875 -369.75)" fill="#676a6f"/>
+      <path id="Path_140159" data-name="Path 140159" d="M386.375,4.75A2.375,2.375,0,1,0,384,2.375,2.378,2.378,0,0,0,386.375,4.75Z" transform="translate(-369.75)" fill="#676a6f"/>
+      <path id="Path_140160" data-name="Path 140160" d="M386.375,192a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,386.375,192Z" transform="translate(-369.75 -184.875)" fill="#676a6f"/>
+      <path id="Path_140161" data-name="Path 140161" d="M386.375,384a2.375,2.375,0,1,0,2.375,2.375A2.378,2.378,0,0,0,386.375,384Z" transform="translate(-369.75 -369.75)" fill="#676a6f"/>
+    </g>
+  </g>
+</svg>

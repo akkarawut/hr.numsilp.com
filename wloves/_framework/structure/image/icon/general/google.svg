@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Group_83962" data-name="Group 83962" transform="translate(-505 -505)">
+    <g id="facebook_2_" data-name="facebook (2)" transform="translate(505 505)">
+      <circle id="Ellipse_1163" data-name="Ellipse 1163" cx="15" cy="15" r="15" transform="translate(0 0)" fill="#fbfbfb"/>
+    </g>
+    <g id="search_1_" data-name="search (1)" transform="translate(511 511)">
+      <path id="Path_81009" data-name="Path 81009" d="M3.989,144.285l-.627,2.339-2.29.048a9.016,9.016,0,0,1-.066-8.4h0l2.039.374.893,2.027a5.371,5.371,0,0,0,.05,3.616Z" transform="translate(0 -133.407)" fill="#fbbb00"/>
+      <path id="Path_81010" data-name="Path 81010" d="M270.273,208.176a9,9,0,0,1-3.208,8.7h0l-2.568-.131-.363-2.269a5.364,5.364,0,0,0,2.308-2.739h-4.813v-3.56h8.645Z" transform="translate(-252.43 -200.857)" fill="#518ef8"/>
+      <path id="Path_81011" data-name="Path 81011" d="M44.07,314.549h0A9,9,0,0,1,30.509,311.8l2.917-2.387a5.353,5.353,0,0,0,7.713,2.741Z" transform="translate(-29.436 -298.531)" fill="#28b446"/>
+      <path id="Path_81012" data-name="Path 81012" d="M42.362,2.072,39.447,4.459a5.352,5.352,0,0,0-7.89,2.8l-2.932-2.4h0A9,9,0,0,1,42.362,2.072Z" transform="translate(-27.618)" fill="#f14336"/>
+    </g>
+  </g>
+</svg>

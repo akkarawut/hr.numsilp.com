@@ -1,0 +1,115 @@
+body .handson-title {
+  display: flex;
+  align-items: center;
+  background: var(--color-dark-or-light);
+  min-height: 50px;
+  border-bottom: 1px solid var(--color-border-nav);
+}
+body .handson-pagination {
+  display: flex;
+  align-items: center;
+  background: var(--color-dark-or-light);
+}
+body .handson-pagination .box-page {
+  border-right: 1px solid var(--color-border-nav);
+  display: flex;
+  align-items: center;
+  height: 3.125rem;
+}
+body .handson-pagination .arrow-previous {
+  cursor: pointer;
+  margin-left: 0.625rem;
+  margin-right: 0.313rem;
+}
+body .handson-pagination .arrow-previous.disabled {
+  cursor: auto;
+  pointer-events: none;
+  opacity: 0.5;
+}
+body .handson-pagination .arrow-next {
+  cursor: pointer;
+}
+body .handson-pagination .arrow-next.disabled {
+  cursor: auto;
+  pointer-events: none;
+  opacity: 0.5;
+}
+body .handson-pagination .custom-select-page {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--color-border-nav);
+  padding-right: 15px;
+}
+body .handson-pagination .custom-select-page .form-select {
+  border-bottom: 0;
+  background: url(arrow-down.svg) no-repeat right;
+  padding-right: 1.25rem;
+  cursor: pointer;
+}
+body .handson-pagination .custom-select-all-page {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--color-border-nav);
+  padding-left: 5px;
+  padding-right: 15px;
+}
+body .handson-pagination .custom-select-all-page .form-select {
+  border-bottom: 0;
+  background: url(arrow-down.svg) no-repeat right;
+  padding-right: 1.563rem;
+  cursor: pointer;
+}
+body .filterHeader input {
+  width: 100% !important;
+}
+body .handson_search {
+  white-space: nowrap !important;
+  border: 1px solid var(--v2-color-text-placeholder) !important;
+  height: 1.563rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+}
+body .custom-handsontable {
+  z-index: 0;
+}
+body .custom-handsontable .changeType {
+  background: var(--v2-color-select-input);
+}
+body .custom-handsontable thead th {
+  background-color: var(--v2-color-select-input);
+  color: var(--v2-color-text-secondary);
+  font-weight: 600;
+  font-size: 0.938rem;
+  height: 2.5rem;
+  text-align: left;
+  vertical-align: middle;
+  font-family: "Sarabun" !important;
+}
+body .custom-handsontable tbody td {
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  vertical-align: middle;
+  font-family: "Sarabun" !important;
+  color: var(--v2-color-text-info);
+  background: var(--color-dark-or-light);
+}
+body .custom-handsontable .htDimmed {
+  font-weight: 400 !important;
+  color: var(--v2-color-text-secondary);
+}
+body .custom-handsontable .listbox.htDimmed {
+  height: auto;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  vertical-align: middle !important;
+  font-family: "Sarabun" !important;
+}
+body .custom-handsontable tbody tr th {
+  background-color: var(--v2-color-select-input);
+}
+body .custom-handsontable .ht__highlight {
+  background: var(--v2-color-border-input) !important;
+}/*# sourceMappingURL=z.handson.css.map */

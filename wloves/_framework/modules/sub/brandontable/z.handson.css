@@ -1,0 +1,50 @@
+.form-handsontable .handsontable tr {
+  background-color: var(--v2-color-hover);
+}
+.form-handsontable .handsontable table thead tr th {
+  background-color: var(--v2-color-bg-card);
+  color: var(--v2-color-secondary);
+  border: 0;
+}
+.form-handsontable .handsontable table thead tr th .changeType {
+  background: transparent;
+  border-color: var(--v2-color-secondary);
+}
+.form-handsontable .handsontable table tbody tr td {
+  background-color: var(--v2-color-hover);
+  border-color: var(--v2-color-border);
+  color: var(--v2-color-info);
+}
+.form-handsontable .handsontable table tbody tr td .htAutocompleteArrow {
+  color: var(--v2-color-secondary);
+}
+.form-handsontable .handsontable table tbody tr td.htDimmed {
+  color: var(--v2-color-secondary);
+}
+.form-handsontable .handsontable .wtHider table thead tr th {
+  background-color: var(--v2-color-bg-card);
+  color: var(--v2-color-secondary);
+  border: 0;
+}
+.form-handsontable .handsontable .wtHider table tbody tr th {
+  background-color: transparent;
+  border-color: var(--v2-color-border);
+  color: var(--v2-color-info);
+}
+.form-handsontable .handsontable .wtHider table tbody tr th .htAutocompleteArrow {
+  color: var(--v2-color-secondary);
+}
+.form-handsontable .handsontable .wtHider table tbody tr th.htDimmed {
+  color: var(--v2-color-secondary);
+}
+.form-handsontable .handsontable .handsontableInputHolder textarea {
+  background-color: var(--v2-color-hover);
+  color: var(--v2-color-info);
+}
+.form-handsontable .handsontable .handsontableInputHolder textarea.handsontableInput {
+  box-shadow: 0 0 0 2px var(--v2-color-primary) inset;
+}
+
+.htDatepickerHolder .pika-lendar table thead tr th {
+  background-color: #ffffff !important;
+}/*# sourceMappingURL=z.handson.css.map */
