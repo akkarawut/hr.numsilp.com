@@ -1,0 +1,65 @@
+.aww-regex-warning-box {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.aww-confirm-password-warning {
+  font-size: 12px;
+  margin: 0;
+  transition: .1s;
+}
+
+.aww-regex-warning-box {
+  .aww-regex-warning-text {
+    font-size: 12px;
+    margin: 0;
+    transition: .1s;
+  }
+}
+
+.aww-regex-warning-box {
+
+  .aww-regex-warning-icon {
+    margin-right: 5px;
+
+    .icon-success {
+      color: #298F6E;
+    }
+
+    .icon-error {
+      color: #FE645B;
+    }
+  }
+}
+
+.aww-regex-box {
+  .aww-regex-input {
+    transition: .1s;
+  }
+
+  &.notvalidate {
+    .aww-regex-input {
+      border: 1px solid #FE645B;
+      box-shadow: 0px 0px 5px 0px rgba(254, 100, 91, .5);
+    }
+
+    .aww-regex-warning-box:not(.success) {
+      .aww-regex-warning-text {
+        color: #FE645B;
+      }
+    }
+  }
+}
+
+.aww-regex-warning-box .aww-regex-warning-icon .icon-error,
+.aww-regex-warning-box .aww-regex-warning-icon .icon-success,
+.aww-regex-warning-box.error .aww-regex-warning-icon .icon-success,
+.aww-regex-warning-box.success .aww-regex-warning-icon .icon-error {
+  display: none;
+}
+
+.aww-regex-warning-box.error .aww-regex-warning-icon .icon-error,
+.aww-regex-warning-box.success .aww-regex-warning-icon .icon-success {
+  display: block;
+}

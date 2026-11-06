@@ -267,7 +267,7 @@ if ($_POST) {
             html = `
               <div>${moment(data).format('LL')}</div>
               <div class="sub-text-tbl">
-              ${moment(data).format('H:m')} น.
+              ${moment(data).format('HH:mm')} น.
               </div>
               `
             return html;

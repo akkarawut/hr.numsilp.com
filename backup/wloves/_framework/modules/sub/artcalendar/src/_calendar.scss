@@ -1,0 +1,116 @@
+.art-calendar {
+  display: flex;
+  flex-flow: column;
+
+  .header {
+    .month-year {
+      font-size: 20px;
+      font-weight: bold;
+      color: #636e73;
+      padding: 20px 0;
+    }
+  }
+
+  .days {
+    display: flex;
+    flex-flow: wrap;
+
+    .day_name {
+      width: calc(100% / 7);
+      border-right: 1px solid #2c7aca;
+      padding: 20px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: bold;
+      color: #818589;
+      color: #fff;
+      background-color: #448cd6;
+
+      &:nth-child(7) {
+        border: none;
+      }
+    }
+
+    .day_num {
+      display: flex;
+      flex-flow: column;
+      width: calc(100% / 7);
+      border-right: 1px solid #e6e9ea;
+      border-bottom: 1px solid #e6e9ea;
+      padding: 15px;
+      font-weight: bold;
+      color: #7c878d;
+      cursor: pointer;
+      min-height: 100px;
+
+      &:nth-child(7n+1) {
+        border-left: 1px solid #e6e9ea;
+      }
+
+      &:hover {
+        background-color: #fdfdfd;
+      }
+
+      &.ignore {
+        background-color: #F8F8F8;
+        color: #ced2d4;
+        cursor: inherit;
+      }
+
+      &.selected {
+        background-color: #E3F5FF;
+        cursor: inherit;
+      }
+
+      span {
+        display: inline-flex;
+        width: 30px;
+        font-size: 14px;
+      }
+
+      .event {
+        margin-top: 10px;
+        font-weight: 500;
+        font-size: 13px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        background-color: #FEC200;
+        color: #fff;
+        word-wrap: break-word;
+        display: flex;
+        justify-content: end;
+        text-transform: capitalize;
+        height: 20px;
+
+        &.start {
+          width: calc(100% + 15px);
+          border-radius: 10px 0px 0px 10px;
+        }
+
+        &.middle {
+          width: calc(100% + 31px);
+          margin-left: -16px;
+          border-radius: 0px;
+        }
+
+        &.end {
+          width: calc(100% + 16px);
+          border-radius: 0px 10px 10px 0px;
+          margin-left: -16px;
+        }
+
+        &.green {
+          background-color: #51ce57;
+        }
+
+        &.blue {
+          background-color: #518fce;
+        }
+
+        &.red {
+          background-color: #ce5151;
+        }
+      }
+    }
+  }
+}

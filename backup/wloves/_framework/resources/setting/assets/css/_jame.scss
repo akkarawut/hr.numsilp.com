@@ -1,0 +1,223 @@
+.btn-icon-light {
+  &::before {
+    content: url('../icons/light.svg');
+  }
+
+  &:hover {
+    &::before {
+      content: url('../icons/bulb.svg');
+    }
+
+    background-color: #FFF2D8 !important;
+  }
+}
+
+// Add Data CSS
+.main-option {
+  display: flex;
+  border: 1px solid var(--v2-color-border);
+
+  & .left-side-option {
+    min-width: 210px;
+    max-width: 210px;
+    width: 100%;
+    height: 100%;
+  }
+
+  & .right-side-option {
+    flex: 1;
+    display: flex;
+  }
+
+  & .container-menu-option {
+    & .nav-menu--modal {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      & li.menu--link {
+        position: relative;
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: var(--v2-color-select-input);
+          color: var(--v2-color-primary);
+
+          &::before {
+            content: '';
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          content: '';
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          width: 5px;
+          height: 100%;
+          opacity: 0;
+          left: 0;
+          top: 0;
+          background: var(--v2-color-primary);
+        }
+
+        &.active {
+          background: var(--v2-color-select-input);
+          color: var(--v2-color-primary);
+
+          &::before {
+            transition: all 0.3s ease-in-out;
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 1;
+            background: var(--v2-color-primary);
+          }
+        }
+      }
+    }
+  }
+
+
+  & .container-field-option {
+    padding: 15px;
+    border-left: 1px solid var(--v2-color-border);
+    border-right: 1px solid var(--v2-color-border);
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: 300px;
+    max-height: 498px;
+
+    & .card-option {
+      width: 270px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid var(--v2-color-border);
+      background-color: var(--color-dark-or-light);
+      text-align: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+      user-select: none;
+
+      & .__icon {
+        width: 40px;
+        height: 40px;
+        margin: auto;
+
+        & img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      & .__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--v2-color-text-info);
+        margin: 5px 0 10px 0;
+      }
+
+      & .__description {
+        font-size: 15px;
+        color: var(--v2-color-text-secondary);
+      }
+
+      &.selected {
+        background-color: var(--v2-color-select-input);
+
+        & .__title {
+          color: var(--v2-color-primary);
+        }
+      }
+    }
+
+  }
+
+  & .container-form-fill {
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 5px solid var(--v2-color-bg);
+    height: fit-content;
+
+    & .__header {
+      color: var(--v2-color-primary);
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+
+    & .__body {}
+  }
+}
+
+.bg-light-blue {
+  background-color: var(--v2-color-optional-1);
+  color: var(--v2-color-primary);
+}
+
+.input-group-custom {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid var(--v2-color-border-input);
+  height: 50px;
+  background-color: var(--color-dark-or-light);
+
+  & .append-group-icon {
+    flex: 1;
+    padding: 0 10px;
+    position: relative;
+
+    & .__icon-delete {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 10px;
+      cursor: pointer;
+    }
+  }
+
+  & input:focus {
+    background-color: unset !important;
+  }
+
+  & .append-input {
+    width: 50px;
+    min-width: 50px;
+    border-left: 1px solid var(--v2-color-border-input);
+
+    & .__icon-delete {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+}
+
+.divider-bold {
+  width: 100%;
+  height: 5px;
+  background: var(--v2-color-bg);
+}

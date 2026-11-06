@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>รายงานการแก้ไขระบบ HR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --surface-2: #f1f3f6;
+    --border: #e3e6eb;
+    --text: #1b1f24;
+    --muted: #5f6b7a;
+    --accent: #2f6fde;
+    --accent-soft: #e7effc;
+    --money: #b45309;
+    --money-soft: #fdf3e2;
+    --ok: #15803d;
+    --warn: #b42318;
+    --warn-soft: #fdecea;
+    --shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 1px 3px rgba(16, 24, 40, .06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1216;
+      --surface: #171b21;
+      --surface-2: #1d222a;
+      --border: #2a313b;
+      --text: #e7eaee;
+      --muted: #97a2b0;
+      --accent: #6ea0f5;
+      --accent-soft: #1b2a44;
+      --money: #f0a54a;
+      --money-soft: #33240f;
+      --ok: #5ccf86;
+      --warn: #f47c70;
+      --warn-soft: #351a18;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --surface-2: #1d222a;
+    --border: #2a313b;
+    --text: #e7eaee;
+    --muted: #97a2b0;
+    --accent: #6ea0f5;
+    --accent-soft: #1b2a44;
+    --money: #f0a54a;
+    --money-soft: #33240f;
+    --ok: #5ccf86;
+    --warn: #f47c70;
+    --warn-soft: #351a18;
+    --shadow: none;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans Thai", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+  /* ส่วนหัว */
+  header.hero { padding: 48px 0 28px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13px; font-weight: 500; color: var(--muted);
+  }
+  .eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+  h1 { font-size: clamp(26px, 4vw, 34px); line-height: 1.25; margin: 10px 0 8px; font-weight: 700; letter-spacing: -.01em; }
+  .lede { color: var(--muted); max-width: 70ch; margin: 0; }
+
+  .stats {
+    display: grid; gap: 12px; margin-top: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  }
+  .stat {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 14px 16px; box-shadow: var(--shadow);
+  }
+  .stat .num { font-size: 28px; font-weight: 700; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .stat .lbl { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .stat.ok .num { color: var(--ok); }
+  .stat.money .num { color: var(--money); }
+
+  /* แถบนำทาง */
+  nav.toc {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav.toc .wrap { display: flex; gap: 6px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; scrollbar-width: none; }
+  nav.toc a {
+    flex: none; text-decoration: none; color: var(--muted);
+    font-size: 13.5px; font-weight: 500;
+    padding: 6px 12px; border-radius: 999px; border: 1px solid transparent;
+  }
+  nav.toc a:hover { color: var(--text); background: var(--surface); border-color: var(--border); }
+  nav.toc a .c { color: var(--muted); font-weight: 400; margin-left: 4px; font-variant-numeric: tabular-nums; }
+
+  .theme-btn {
+    margin-left: auto; flex: none; cursor: pointer;
+    background: var(--surface); color: var(--text);
+    border: 1px solid var(--border); border-radius: 999px;
+    font: inherit; font-size: 13px; padding: 5px 12px;
+  }
+
+  /* ส่วนเนื้อหา */
+  main { padding: 28px 0 64px; }
+  section { margin-bottom: 36px; }
+  .sec-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  h2 { font-size: 20px; margin: 0; font-weight: 600; }
+  .count { font-size: 13px; color: var(--muted); }
+  .tag {
+    font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px;
+    background: var(--money-soft); color: var(--money);
+  }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; box-shadow: var(--shadow); overflow: hidden;
+  }
+  .callout {
+    padding: 10px 16px; font-size: 14px; color: var(--money);
+    background: var(--money-soft); border-bottom: 1px solid var(--border);
+  }
+
+  ol.fixes { list-style: none; margin: 0; padding: 0; counter-reset: fix; }
+  ol.fixes li {
+    counter-increment: fix;
+    display: grid; grid-template-columns: 28px 1fr; gap: 0 10px;
+    padding: 12px 16px; border-top: 1px solid var(--border);
+  }
+  ol.fixes li:first-child { border-top: 0; }
+  ol.fixes li:hover { background: var(--surface-2); }
+  ol.fixes li::before {
+    content: counter(fix);
+    font-size: 12px; font-weight: 600; color: var(--muted);
+    background: var(--surface-2); border-radius: 999px;
+    width: 24px; height: 24px; display: grid; place-items: center; margin-top: 1px;
+    font-variant-numeric: tabular-nums;
+  }
+  .desc { min-width: 0; }
+  .detail { display: block; color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+  .flag {
+    display: inline-block; font-size: 11.5px; font-weight: 600; margin-left: 6px;
+    padding: 1px 8px; border-radius: 999px; vertical-align: 1px;
+    background: var(--warn-soft); color: var(--warn);
+  }
+
+  .where { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+  .where-lbl { font-size: 12px; color: var(--muted); }
+  .page {
+    font-size: 12px; font-weight: 500; line-height: 1.5;
+    padding: 1px 10px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent);
+  }
+  footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); padding: 20px 0 40px; }
+
+  @media (max-width: 640px) {
+    header.hero { padding-top: 32px; }
+  }
+  @media print {
+    nav.toc { display: none; }
+    body { background: #fff; }
+    .card, .stat { box-shadow: none; }
+    section { break-inside: avoid-page; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>ระบบบริหารงานบุคคล (HR) · 6 พฤศจิกายน 2569</span>
+    <h1>รายงานการแก้ไขข้อผิดพลาดของระบบ</h1>
+    <p class="lede">สรุปรายการข้อผิดพลาดในการทำงานของระบบที่ได้ดำเนินการแก้ไขแล้ว จำแนกตามหมวดการใช้งาน พร้อมระบุหน้าจอที่เกี่ยวข้องตามชื่อเมนูในระบบ</p>
+
+    <div class="stats">
+      <div class="stat ok"><div class="num">38</div><div class="lbl">รายการที่แก้ไขแล้ว</div></div>
+      <div class="stat money"><div class="num">9</div><div class="lbl">รายการที่เกี่ยวข้องกับยอดเงิน</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="สารบัญ">
+  <div class="wrap">
+    <a href="#salary">เงินเดือนและคอมมิชชัน<span class="c">9</span></a>
+    <a href="#checkin">ลงเวลาเข้า-ออกงาน<span class="c">14</span></a>
+    <a href="#leave">การลางาน<span class="c">5</span></a>
+    <a href="#ot">การทำงานล่วงเวลา<span class="c">2</span></a>
+    <a href="#employee">พนักงานและการตั้งค่า<span class="c">6</span></a>
+    <a href="#general">ทั่วไป<span class="c">2</span></a>
+    <button class="theme-btn" type="button" id="themeBtn">สลับธีม</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="salary">
+    <div class="sec-head" style="margin-top: 20px;"><h2>เงินเดือน ประกันสังคม และคอมมิชชัน</h2><span class="count">9 รายการ</span><span class="tag">เกี่ยวข้องกับยอดเงิน</span></div>
+    <div class="card">
+      <div class="callout">รายการในหมวดนี้มีผลต่อยอดเงิน ขอแนะนำให้ฝ่ายบุคคลตรวจสอบยอดเงินเดือนในรอบถัดไปก่อนดำเนินการจ่าย</div>
+      <ol class="fixes">
+        <li><div class="desc">การกด "ประมวลผลใหม่" ทำให้ยอดเงินเดือนของพนักงานรายเดือนเพิ่มเป็นสองเท่า<span class="detail">ระบบคำนวณยอดของแต่ละงวดให้ตรงกับการสร้างรายการครั้งแรกแล้ว</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">ทำเงินเดือน</span></span></div></li>
+        <li><div class="desc">การกด "ประมวลผลใหม่" นำข้อมูลผลการปฏิบัติงานของงวดก่อนหน้ามาใช้ และบันทึกทับข้อมูลของงวดก่อนหน้า<span class="detail">ระบบอ้างอิงข้อมูลของงวดปัจจุบันอย่างถูกต้องแล้ว</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">ทำเงินเดือน</span></span></div></li>
+        <li><div class="desc">พนักงานทดลองงานถูกหักเงินประกันสังคมจากยอดสุทธิ ขณะที่หน้าจอแสดงว่าไม่มีการหัก<span class="detail">พนักงานทดลองงานไม่ถูกหักเงินประกันสังคม ตรงกับที่แสดงบนหน้าจอแล้ว</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">ทำเงินเดือน</span><span class="page">อนุมัติการออกเงินเดือน/ค่าจ้าง</span></span></div></li>
+        <li><div class="desc">เงินประกันสังคมที่ตั้งค่าเป็นเปอร์เซ็นต์ถูกคำนวณต่ำกว่าที่กำหนดครึ่งหนึ่ง<span class="flag">ยอดหักเปลี่ยนแปลง</span><span class="detail">ตัวอย่าง: ตั้งค่าไว้ 5% แต่ระบบหักเพียง 2.5% ของเงินเดือนในงวดนั้น หลังการแก้ไข ยอดหักของพนักงานกลุ่มนี้จะเพิ่มขึ้นให้ถูกต้องตามที่ตั้งค่า</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">ทำเงินเดือน</span><span class="page">อนุมัติการออกเงินเดือน/ค่าจ้าง</span></span></div></li>
+        <li><div class="desc">ค่าเริ่มต้นของหน่วยเงินประกันสังคมไม่ถูกต้อง ทำให้อาจคำนวณยอดหักสูงเกินจริงอย่างมาก<span class="detail">ปรับค่าเริ่มต้นเป็นหน่วย "บาท" แล้ว</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">การทำงานของระบบ</span></span></div></li>
+        <li><div class="desc">การบันทึกหน้าตั้งค่าภาษี ทำให้การหักเงินประกันสังคมถูกปิดไปด้วย<span class="detail">การบันทึกหน้าตั้งค่าภาษีไม่กระทบการตั้งค่าประกันสังคมแล้ว</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">การทำงานของระบบ</span></span></div></li>
+        <li><div class="desc">การกรองรายการคอมมิชชันตามเดือน คำนวณวันสิ้นเดือนไม่ถูกต้อง ทำให้รายการบางส่วนไม่แสดง<span class="where"><span class="where-lbl">หน้า</span><span class="page">ลงบันทึกยอดขายและค่าคอมมิชชั่น</span></span></div></li>
+        <li><div class="desc">หน้าอนุมัติคอมมิชชันแสดงยอดหลังหักภาษีไม่ถูกต้อง เมื่อยอดคอมมิชชันตั้งแต่ 1,000 บาทขึ้นไป<span class="detail">เป็นการแสดงผลบนหน้าจอเท่านั้น ยอดที่บันทึกในระบบถูกต้องอยู่แล้ว</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">ตรวจสอบความถูกต้องบันทึกยอดขายและค่าคอมมิชชั่น</span></span></div></li>
+        <li><div class="desc">การลบรายการคอมมิชชัน อาจทำให้ไฟล์แนบของรายการคอมมิชชันอื่นถูกลบไปด้วย และหน้ารายละเอียดอาจแสดงไฟล์แนบของรายการอื่นปนมา<span class="where"><span class="where-lbl">หน้า</span><span class="page">ลงบันทึกยอดขายและค่าคอมมิชชั่น</span><span class="page">ตรวจสอบความถูกต้องบันทึกยอดขายและค่าคอมมิชชั่น</span></span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="checkin">
+    <div class="sec-head"><h2>การลงเวลาเข้า-ออกงาน</h2><span class="count">14 รายการ</span></div>
+    <div class="card">
+      <ol class="fixes">
+        <li><div class="desc">การลงเวลาย้อนหลังให้พนักงานหนึ่งคน ทำให้รายการลงเวลาของพนักงานคนอื่นในวันเดียวกันหายไปจากรายงาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกเข้า - ออกงาน</span><span class="page">รายงานการเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">การลงเวลาย้อนหลังตรวจสอบการทำงานล่วงเวลาจากเวลาเข้างาน แทนที่จะเป็นเวลาออกงาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">รายการลงเวลาย้อนหลังถูกบันทึกสถานะไม่ถูกต้อง ทั้งที่มีเวลาเข้าและออกงานครบแล้ว<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">ชั่วโมงทำงานที่คำนวณตอนลงเวลาออกงานอาจคลาดเคลื่อน<span class="where"><span class="where-lbl">หน้า</span><span class="page">ภาพรวมรายบุคคล</span><span class="page">บันทึกเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">พนักงานที่เข้างานภายในช่วงเวลาผ่อนผัน ยังถูกบันทึกจำนวนนาทีที่มาสาย<span class="where"><span class="where-lbl">หน้า</span><span class="page">ภาพรวมรายบุคคล</span><span class="page">บันทึกเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">พนักงานที่ยังไม่ได้กำหนดรูปแบบเวลาทำงาน เมื่อลงเวลาแล้วไม่มีสถานะการเข้างาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">ภาพรวมรายบุคคล</span><span class="page">บันทึกเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">วันหยุดที่กำหนดไว้หลายวันติดต่อกัน ไม่ถูกนับเป็นวันหยุดในการตรวจสอบอัตโนมัติ<span class="where"><span class="where-lbl">หน้า</span><span class="page">ตั้งค่าวันหยุด</span></span></div></li>
+        <li><div class="desc">การลงเวลาออกงานอัตโนมัติ ไม่ได้บันทึกเวลาออกงาน ทำให้ตารางแสดงเวลาออกงานว่าง<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกเข้า - ออกงาน</span><span class="page">อนุมัติการลงเวลา</span></span></div></li>
+        <li><div class="desc">ใบลาที่ยังรออนุมัติแสดงปนอยู่ในหน้า "บันทึกเข้า-ออกงานของฉัน"<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">รายงานการลงเวลาไม่แสดงชื่อเดือนสำหรับเดือนมกราคมถึงกันยายน และจำนวนวันในเดือนอ้างอิงปีปัจจุบันแทนปีที่เลือก<span class="where"><span class="where-lbl">หน้า</span><span class="page">รายงานการเข้า - ออกงาน</span><span class="page">สรุปข้อมูลเงินเดือน</span></span></div></li>
+        <li><div class="desc">ผลรวมจำนวนนาทีที่มาสาย นับรวมรายการที่ถูกแทนที่ด้วยการลงเวลาย้อนหลังแล้ว<span class="where"><span class="where-lbl">หน้า</span><span class="page">รายงานการเข้า - ออกงาน</span></span></div></li>
+        <li><div class="desc">รูปแบบเวลาทำงานที่ข้ามคืน คำนวณชั่วโมงทำงานไม่ถูกต้อง<span class="detail">ตัวอย่าง: กะ 22:00–06:00 ระบบคำนวณได้ 16 ชั่วโมง ที่ถูกต้องคือ 8 ชั่วโมง</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">ตั้งค่ารูปแบบเวลาทำงาน</span></span></div></li>
+        <li><div class="desc">รูปแบบเวลาทำงานที่สร้างใหม่ ไม่ตรวจสอบสถานะการมาสายจนกว่าจะมีการแก้ไขครั้งแรก<span class="where"><span class="where-lbl">หน้า</span><span class="page">ตั้งค่ารูปแบบเวลาทำงาน</span></span></div></li>
+        <li><div class="desc">การลบรูปแบบเวลาทำงานและย้ายพนักงานไปยังรูปแบบอื่น อาจปรับจำนวนพนักงานของรูปแบบปลายทางไม่ถูกต้อง<span class="where"><span class="where-lbl">หน้า</span><span class="page">ตั้งค่ารูปแบบเวลาทำงาน</span></span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="leave">
+    <div class="sec-head"><h2>การลางาน</h2><span class="count">5 รายการ</span></div>
+    <div class="card">
+      <ol class="fixes">
+        <li><div class="desc">การกรองตามเดือนในหน้าประวัติการลาไม่มีผล ระบบแสดงทุกรายการ<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกการขอลางาน</span></span></div></li>
+        <li><div class="desc">การกรองตามช่วงวันที่ในหน้าอนุมัติการลา ไม่แสดงรายการที่ยื่นในวันสุดท้ายของช่วง<span class="where"><span class="where-lbl">หน้า</span><span class="page">อนุมัติการลา</span></span></div></li>
+        <li><div class="desc">พนักงานสามารถยื่นลาในวันที่ซ้ำกับใบลาที่ยังรออนุมัติได้<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกการขอลางาน</span></span></div></li>
+        <li><div class="desc">หน้ารายละเอียดสำหรับผู้อนุมัติไม่แสดงประเภท "ลาพักร้อน" และไม่แสดงวันสิ้นสุดการลา<span class="where"><span class="where-lbl">หน้า</span><span class="page">อนุมัติการลา</span></span></div></li>
+        <li><div class="desc">หน้ารายละเอียดใบลาอาจแสดงไฟล์แนบของใบลาอื่นปนมา<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกการขอลางาน</span><span class="page">อนุมัติการลา</span></span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="ot">
+    <div class="sec-head"><h2>การทำงานล่วงเวลา (OT)</h2><span class="count">2 รายการ</span></div>
+    <div class="card">
+      <ol class="fixes">
+        <li><div class="desc">คำขอทำงานล่วงเวลาที่ข้ามเวลาเที่ยงคืน คำนวณจำนวนชั่วโมงไม่ถูกต้อง<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกการขอล่วงเวลา (OT)</span><span class="page">อนุมัติโอที</span></span></div></li>
+        <li><div class="desc">หน้าอนุมัติแสดงเวลายื่นคำขอไม่ครบสองหลัก<span class="detail">ตัวอย่าง: แสดง 10:5 แทน 10:05</span><span class="where"><span class="where-lbl">หน้า</span><span class="page">อนุมัติโอที</span></span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="employee">
+    <div class="sec-head"><h2>ข้อมูลพนักงาน การทดลองงาน และการตั้งค่า</h2><span class="count">6 รายการ</span></div>
+    <div class="card">
+      <ol class="fixes">
+        <li><div class="desc">การแก้ไขข้อมูลพนักงานที่ผ่านการทดลองงานแล้ว ทำให้พนักงานหายไปจากหน้าประวัติการประเมินทดลองงาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">ข้อมูลพนักงาน</span><span class="page">อนุมัติผ่านการทดลองงาน</span></span></div></li>
+        <li><div class="desc">เปอร์เซ็นต์ผลการปฏิบัติงานของพนักงานบางรายคำนวณไม่ถูกต้อง เมื่อแสดงในรายการเดียวกับพนักงานทดลองงาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">อนุมัติผ่านการทดลองงาน</span></span></div></li>
+        <li><div class="desc">หน้าต่างยืนยัน "ไม่ผ่านการทดลองงาน" ไม่แสดงชื่อพนักงาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">อนุมัติผ่านการทดลองงาน</span></span></div></li>
+        <li><div class="desc">การลบสาขาและย้ายพนักงานไปยังสาขาอื่น อาจปรับจำนวนพนักงานของสาขาปลายทางไม่ถูกต้อง<span class="where"><span class="where-lbl">หน้า</span><span class="page">ข้อมูลสาขา</span></span></div></li>
+        <li><div class="desc">หน้าแดชบอร์ดไม่แสดงชื่อสาขา ในกรณีที่ไม่มีข้อมูลสาขาตอนเข้างาน<span class="where"><span class="where-lbl">หน้า</span><span class="page">ภาพรวมรายบุคคล</span></span></div></li>
+        <li><div class="desc">การบันทึกเงื่อนไขการหักเงินโดยไม่เลือกรูปแบบเวลาทำงาน ทำให้ระบบแจ้งข้อผิดพลาด<span class="where"><span class="where-lbl">หน้า</span><span class="page">การทำงานของระบบ</span></span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="general">
+    <div class="sec-head"><h2>ทั่วไป</h2><span class="count">2 รายการ</span></div>
+    <div class="card">
+      <ol class="fixes">
+        <li><div class="desc">เลขที่คำขอลา คำขอทำงานล่วงเวลา และรายการคอมมิชชัน อาจซ้ำกันหลังจากมีการลบรายการ<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกการขอลางาน</span><span class="page">บันทึกการขอล่วงเวลา (OT)</span><span class="page">ลงบันทึกยอดขายและค่าคอมมิชชั่น</span></span></div></li>
+        <li><div class="desc">การยื่นคำขอลา คำขอทำงานล่วงเวลา หรือรายการคอมมิชชัน แจ้งข้อผิดพลาดในกรณีที่ระบบยังไม่มีผู้ใช้ในตำแหน่งฝ่ายบุคคลหรือผู้จัดการ<span class="where"><span class="where-lbl">หน้า</span><span class="page">บันทึกการขอลางาน</span><span class="page">บันทึกการขอล่วงเวลา (OT)</span><span class="page">ลงบันทึกยอดขายและค่าคอมมิชชั่น</span></span></div></li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">หากพบปัญหาในการใช้งานหลังการแก้ไข กรุณาแจ้งทีมพัฒนาพร้อมรายละเอียดขั้นตอนที่ใช้งาน</div>
+</footer>
+
+<script>
+  // สลับธีมสว่าง/มืด และจำค่าไว้ในเบราว์เซอร์ (ถ้าเข้าถึง storage ไม่ได้ก็ยังทำงานได้)
+  (function () {
+    var root = document.documentElement;
+    try {
+      var saved = localStorage.getItem('hr-report-theme');
+      if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    } catch (e) {}
+    document.getElementById('themeBtn').addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      if (!current) current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('hr-report-theme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>

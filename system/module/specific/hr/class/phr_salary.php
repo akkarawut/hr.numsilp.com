@@ -465,10 +465,12 @@ class Phr_salary {
 
     $user_info = Amst::getByID('sys_user', '*', $model['user_id']);
 
+    // performance ของรอบนี้บันทึก date = to_date ของรอบเงินเดือน (ทั้งรายเดือนและรายวัน)
+    // เดิมใช้ installment_date ซึ่งเป็นวันของรอบก่อน ทำให้ไปเขียนทับ performance รอบก่อน
     $sql_where = [
       'AND' => [
         'user_id' => $model['user_id'],
-        'date'    => $model['installment_date']
+        'date'    => $model['to_date']
       ]
     ];
     $history_performance_info = Amst::get($code . '_performance', '*', $sql_where);
@@ -722,31 +724,34 @@ class Phr_salary {
         $is_fine = 1;
       }
 
-      $total_price = $user_info['salary'] - $fine_price - $employee_cost_total_price;
+      // รายเดือน/ทดลองงาน จ่ายเดือนละ 2 รอบ -> ใช้ครึ่งหนึ่งให้ตรงกับตอนสร้างรายการ (Phr_employee)
+      // เดิมใช้ยอดเต็ม ทำให้กด refresh แล้วเงินเดือนกลายเป็น 2 เท่า
+      $salary_period = $user_info['salary'];
+      if ($user_info['employee_status'] != 'day') {
+        $salary_period = $user_info['salary'] / 2;
+      }
+
+      $total_price = $salary_period - $fine_price - $employee_cost_total_price;
 
       $is_security    = 0;
       $security_price = 0;
-      if ($user_info['employee_status'] != 'day') {
+      // ทดลองงานไม่หักประกันสังคม -> เช็คก่อนหัก (เดิมหักไปแล้วค่อยตั้งเป็น 0 ทำให้ยอดสุทธิไม่ตรงกับที่แสดง)
+      if ($user_info['employee_status'] != 'day' && $user_info['employee_status'] != 'trial_work') {
         $is_security    = $user_info['is_security'];
-        $security_price = $user_info['security_price'];
+        $security_price = $user_info['security_price'] / 2;
 
-        if ($user_info['is_security'] && $user_info['employee_status'] != 'day') {
+        if ($user_info['is_security']) {
           if ($user_info['security_unit'] == 'bath') {
             $total_price -= $security_price;
           } else {
-            $security_price = ($user_info['salary'] * ($security_price / 100));
+            $security_price = ($salary_period * ($user_info['security_price'] / 100));
             $total_price -= $security_price;
           }
-        }
-
-        if ($user_info['employee_status'] == 'trial_work') {
-          $is_security    = 0;
-          $security_price = 0;
         }
       }
 
       $u_salary_data = [
-        'salary'                    => $user_info['salary'],
+        'salary'                    => $salary_period,
         'is_security'               => $is_security,
         'security_price'            => $security_price,
         'is_fine'                   => $is_fine,

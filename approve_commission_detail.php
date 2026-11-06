@@ -290,7 +290,7 @@ $arr_status_color = [
   <script>
     function calTotalPrice(t) {
       let tax_val = t.value;
-      let commission = parseFloat(document.querySelector('.txt_commission').innerHTML);
+      let commission = parseFloat(document.querySelector('.txt_commission').innerHTML.replace(/,/g, '')); // ตัด , ออกก่อน ไม่งั้น 1,500.00 จะได้ 1
       let tax_price = commission * (tax_val / 100);
       let total = commission - tax_price;
       let txt_cal_txt = document.querySelector('.txt_cal_txt').innerHTML = w.formatNumber(total) + ' บาท';

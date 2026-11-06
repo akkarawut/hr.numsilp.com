@@ -1,0 +1,251 @@
+//checkbox radio
+@mixin checkbox-slide($data) {
+  $color_on: map-get($data, "color_on");
+  $color_off: map-get($data, "color_off");
+  $border_size: map-get($data, "border_size");
+  $font_size: map-get($data, "font_size");
+  $width: map-get($data, "width");
+  $height: map-get($data, "height");
+  $bg_color_on: map-get($data, "bg_color_on");
+  $bg_color_off: map-get($data, "bg_color_off");
+
+  display: flex;
+  align-items: center;
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+
+    + .for_style {
+      outline: 0;
+      display: block;
+      width: $width;
+      min-width: $width;
+      height: $height;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      margin-bottom: 0;
+      padding: 2px;
+      transition: all 0.2s ease;
+      background-color: $bg_color_off;
+      border: $border_size solid $color_off;
+      border-radius: 50px;
+
+      &:after,
+      &:before {
+        position: relative;
+        display: block;
+        content: "";
+        width: 50%;
+        height: 100%;
+      }
+
+      &:after {
+        left: 0;
+        transition: all 0.2s ease;
+        background: $color_off;
+        content: "";
+        border-radius: 1em;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      .on {
+        opacity: 0;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        font-size: $font_size;
+        transform: translate(0, -57%);
+        margin: 0;
+        padding: 0;
+        line-height: 1em;
+        transition: all 0.3s;
+        color: $color_on;
+        cursor: pointer;
+      }
+
+      .off {
+        position: absolute;
+        right: 3px;
+        top: 50%;
+        font-size: $font_size;
+        transform: translate(0, -57%);
+        margin: 0;
+        padding: 0;
+        line-height: 1em;
+        transition: all 0.3s;
+        color: $color_off;
+        cursor: pointer;
+      }
+    }
+
+    &:checked + .for_style {
+      border-color: $color_on;
+      background-color: $bg_color_on;
+
+      &:after {
+        left: 50%;
+        background-color: $color_on;
+      }
+
+      .on {
+        opacity: 1;
+      }
+
+      .off {
+        opacity: 0;
+      }
+
+      &:disabled {
+        + .for_style {
+          filter: opacity(0.5);
+        }
+      }
+    }
+  }
+}
+@mixin checkbox-sun($data) {
+  $bg_color: map-get($data, "bg_color");
+  $bg_color_active: map-get($data, "bg_color_active");
+  $border_color: map-get($data, "border_color");
+  $border_color_active: map-get($data, "border_color_active");
+  $box_size: map-get($data, "box_size");
+  $icon_size: map-get($data, "icon_size");
+
+  height: $box_size;
+  width: $box_size;
+  min-width: $box_size;
+  position: relative;
+  //normal
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  //active
+  input[type="checkbox"],
+  input[type="radio"] {
+    + label {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 0 0 0px;
+      height: 100%;
+      width: 100%;
+      background-color: $bg_color;
+      border: 3px solid $border_color;
+      position: relative;
+      border-radius: 50%;
+    }
+
+    &:checked + label {
+      background-color: $border_color_active;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        height: $icon_size;
+        width: $icon_size;
+        border-radius: 50%;
+        background-color: $bg_color_active;
+      }
+    }
+  }
+}
+@mixin checkbox-group($data) {
+  $icon_color: map-get($data, "icon_color");
+  $icon_color_active: map-get($data, "icon_color_active");
+  $bg_color: map-get($data, "bg_color");
+  $bg_color_active: map-get($data, "bg_color_active");
+  $border_color: map-get($data, "border_color");
+  $border_color_active: map-get($data, "border_color_active");
+  $box_size: map-get($data, "box_size");
+  $icon_size: map-get($data, "icon_size");
+  $icon: map-get($data, "icon");
+
+  position: relative;
+  height: $box_size;
+  width: $box_size;
+  min-width: $box_size;
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    + label {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0 0 0 0px;
+      height: 100%;
+      width: 100%;
+      background-color: $bg_color;
+      border: 1px solid $border_color;
+      position: relative;
+      border-radius: 5px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        height: $icon_size;
+        width: $icon_size;
+        background-color: $icon_color;
+        -webkit-mask: url($icon) no-repeat 50% 50%;
+        mask: url($icon) no-repeat 50% 50%;
+        transition: all 0.3s;
+      }
+    }
+
+    &:checked + label {
+      background-color: $bg_color_active;
+      border: 1px solid $border_color_active;
+
+      &:before {
+        background-color: $icon_color_active;
+      }
+    }
+  }
+  &.check-all {
+    $icon_size: 12px;
+    $icon_active: "../icon/dash.svg";
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      + label {
+        &:before {
+          height: $icon_size;
+          width: $icon_size;
+          -webkit-mask: url($icon) no-repeat 50% 50%;
+          mask: url($icon) no-repeat 50% 50%;
+        }
+      }
+
+      &:checked + label {
+        &:before {
+          -webkit-mask: url($icon_active) no-repeat 50% 50%;
+          mask: url($icon_active) no-repeat 50% 50%;
+        }
+      }
+    }
+  }
+}

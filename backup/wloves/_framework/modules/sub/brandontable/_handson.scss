@@ -1,0 +1,80 @@
+.form-handsontable .handsontable {
+  tr {
+    background-color: var(--v2-color-hover);
+  }
+  table {
+    thead tr th {
+      background-color: var(--v2-color-bg-card);
+      color: var(--v2-color-secondary);
+      border: 0;
+
+      .changeType {
+        background: transparent;
+        border-color: var(--v2-color-secondary);
+      }
+    }
+  
+    tbody tr td {
+      background-color: var(--v2-color-hover);
+      border-color: var(--v2-color-border);
+      color: var(--v2-color-info);
+
+      .htAutocompleteArrow {
+        color: var(--v2-color-secondary);
+      }
+
+      &.htDimmed {
+        color: var(--v2-color-secondary);
+      }
+    }
+  }
+
+  .wtHider {
+    table {
+      thead tr th {
+        background-color: var(--v2-color-bg-card);
+        color: var(--v2-color-secondary);
+        border: 0;
+      }
+    
+      tbody tr th {
+        background-color: transparent;
+        border-color: var(--v2-color-border);
+        color: var(--v2-color-info);
+  
+        .htAutocompleteArrow {
+          color: var(--v2-color-secondary);
+        }
+  
+        &.htDimmed {
+          color: var(--v2-color-secondary);
+        }
+      }
+    }
+  }
+
+  .handsontableInputHolder {
+    textarea {
+      background-color: var(--v2-color-hover);
+      color: var(--v2-color-info);
+
+      &.handsontableInput {
+        box-shadow: 0 0 0 2px var(--v2-color-primary) inset;
+      }
+    }
+  }
+}
+
+.htDatepickerHolder {
+  .pika-lendar {
+    table {
+      thead {
+        tr {
+          th {
+            background-color: #ffffff !important;
+          }
+        }
+      }
+    }
+  }
+}

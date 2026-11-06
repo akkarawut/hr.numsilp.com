@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path451" d="M0-682.665H20v20H0Z" transform="translate(0 682.665)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="check-mark" transform="translate(0 -0.002)">
+    <g id="g441" transform="translate(0 0.002)">
+      <g id="g443" transform="translate(5.351 6.598)">
+        <path id="path445" d="M-287.452-19.863a.779.779,0,0,1-.552-.229l-2.5-2.5a.781.781,0,0,1,0-1.1.781.781,0,0,1,1.1,0l1.943,1.943,4.689-4.689a.781.781,0,0,1,1.1,0,.781.781,0,0,1,0,1.1l-5.241,5.241A.779.779,0,0,1-287.452-19.863Z" transform="translate(290.729 26.667)" fill="#fff"/>
+      </g>
+      <g id="g447">
+        <g id="g449" clip-path="url(#clip-path)">
+          <g id="g455" transform="translate(0 0)">
+            <path id="path457" d="M-646-341.332a10.011,10.011,0,0,1,10,10,10.011,10.011,0,0,1-10,10,10.011,10.011,0,0,1-10-10A10.011,10.011,0,0,1-646-341.332Zm0,18.438a8.447,8.447,0,0,0,8.438-8.437A8.447,8.447,0,0,0-646-339.77a8.447,8.447,0,0,0-8.437,8.438A8.447,8.447,0,0,0-646-322.895Z" transform="translate(655.998 341.332)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

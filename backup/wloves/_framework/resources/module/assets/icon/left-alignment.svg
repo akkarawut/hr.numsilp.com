@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.333" height="20" viewBox="0 0 19.333 20">
+  <g id="left-alignment" transform="translate(-2 -1)">
+    <path id="Path_140518" data-name="Path 140518" d="M8,3A2,2,0,0,0,6,5V9a2,2,0,0,0,2,2h7.333a2,2,0,0,0,2-2V5a2,2,0,0,0-2-2Z" transform="translate(-1.333 -0.667)" fill="#3872e1"/>
+    <path id="Path_140519" data-name="Path 140519" d="M20.667,17H8a2,2,0,0,0-2,2v4a2,2,0,0,0,2,2H20.667a2,2,0,0,0,2-2V19A2,2,0,0,0,20.667,17Z" transform="translate(-1.333 -5.333)" fill="#3872e1"/>
+    <path id="Path_140520" data-name="Path 140520" d="M2,20.333a.667.667,0,1,0,1.333,0V1.667A.667.667,0,1,0,2,1.667Z" fill="#3872e1"/>
+  </g>
+</svg>

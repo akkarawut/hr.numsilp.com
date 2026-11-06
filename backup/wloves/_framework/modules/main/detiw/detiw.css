@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600&display=swap");
+#btn-debug-code-container {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 999999;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+#btn-debug-code-container .btn-debug-code {
+  width: 35px;
+  height: 40px;
+  border: 0;
+  opacity: 0.5;
+  transition: all 0.2s;
+  border-bottom: 1px solid #ececec;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#btn-debug-code-container .btn-debug-code:hover {
+  opacity: 0.9;
+}
+#btn-debug-code-container .btn-debug-code:last-child {
+  border-bottom: 0;
+}
+
+#debug-code-modal {
+  font-family: "Sarabun", sans-serif;
+  opacity: 0;
+  display: none;
+  transition: all 0.2s;
+  width: 500px;
+  min-width: 300px;
+  min-height: 200px;
+  height: 500px;
+  position: fixed;
+  left: calc(50% - 150px);
+  top: 5%;
+  border-radius: 10px;
+  background-color: #3A4248;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+  overflow: hidden;
+}
+#debug-code-modal.is_show {
+  opacity: 1;
+  display: block;
+}
+#debug-code-modal:before {
+  cursor: nw-resize;
+  position: absolute;
+  right: 7px;
+  bottom: 2px;
+}
+#debug-code-modal .debug-code-header {
+  cursor: move;
+  padding: 10px 10px 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3A4248;
+  font-family: "Sarabun", sans-serif;
+}
+#debug-code-modal .debug-code-header .debug-code-title {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+  color: #fff;
+}
+#debug-code-modal .debug-code-header .debug-code-close {
+  background: none;
+  border: none;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+#debug-code-modal .debug-code-header .debug-code-close:hover {
+  transform: rotate(90deg);
+  opacity: 0.75;
+}
+#debug-code-modal .debug-code-header .debug-code-close:focus {
+  outline: none;
+}
+#debug-code-modal .debug-code-sub-header {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  padding: 10px 15px;
+}
+#debug-code-modal .debug-code-sub-header .expand {
+  padding: 0 7px;
+  background-color: #8bc34a;
+  border-radius: 20px;
+  color: #fff;
+  margin-right: 10px;
+  font-family: "Sarabun", sans-serif;
+  cursor: pointer;
+  font-size: 12px;
+}
+#debug-code-modal .debug-code-sub-header .expand:hover {
+  background-color: #7bad41;
+}
+#debug-code-modal .debug-code-sub-header .unexpand {
+  padding: 0 12px;
+  background-color: #ff9800;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Sarabun", sans-serif;
+  font-size: 12px;
+}
+#debug-code-modal .debug-code-sub-header .unexpand:hover {
+  background-color: #e98d02;
+}
+#debug-code-modal .debug-code-body {
+  width: 100%;
+  height: calc(100% - 98px);
+  padding: 0 15px 0 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+#debug-code-modal .debug-code-body::-webkit-scrollbar {
+  width: 4px;
+}
+#debug-code-modal .debug-code-body::-webkit-scrollbar-track {
+  background: #505558;
+  border-radius: 4px;
+}
+#debug-code-modal .debug-code-body::-webkit-scrollbar-thumb {
+  background: #292f33;
+  border-radius: 4px;
+}
+#debug-code-modal .debug-code-body::-webkit-scrollbar-thumb:hover {
+  background: #1a1e20;
+}
+#debug-code-modal .debug-code-body .code-group {
+  font-family: "Sarabun", sans-serif;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+#debug-code-modal .debug-code-body .code-group .code-icon {
+  padding-right: 7px;
+}
+#debug-code-modal .debug-code-body .code-group .code-icon svg {
+  transition: all 0.3s;
+  margin-top: -4px;
+}
+#debug-code-modal .debug-code-body .code-group.active .code-icon svg {
+  transform: rotate(90deg);
+}
+#debug-code-modal .debug-code-body .code-group .code-class {
+  color: #E91E63;
+}
+#debug-code-modal .debug-code-body .code-group .code-connect {
+  color: #9e9e9e;
+}
+#debug-code-modal .debug-code-body .code-group .code-function {
+  color: #FF9800;
+}
+#debug-code-modal .debug-code-body .code-group .code-bracket {
+  color: #E91E63;
+}
+#debug-code-modal .debug-code-body .code-group .params-group .code-params {
+  color: #FFF;
+  word-break: break-all;
+  font-size: 13px;
+}
+#debug-code-modal .debug-code-body .code-group .params-group .code-params:after {
+  content: ", ";
+  color: #FF9800;
+  font-size: 20px;
+}
+#debug-code-modal .debug-code-body .code-group .params-group .code-params:last-child:after {
+  content: "";
+}
+#debug-code-modal .debug-code-body .code-group .params-group .code-params .debug-code-param-key {
+  cursor: pointer;
+}
+#debug-code-modal .debug-code-body .code-group .params-group .code-params .debug-code-param-key:hover {
+  color: #3e88fb;
+}
+#debug-code-modal .debug-code-body .code-response {
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+#debug-code-modal .debug-code-body .code-response pre {
+  background-color: #272822;
+  margin-bottom: 0;
+  font-size: 12px;
+}
+#debug-code-modal .debug-code-body .code-response pre::-webkit-scrollbar {
+  height: 4px;
+}
+#debug-code-modal .debug-code-body .code-response pre::-webkit-scrollbar-track {
+  background: #505558;
+  border-radius: 4px;
+}
+#debug-code-modal .debug-code-body .code-response pre::-webkit-scrollbar-thumb {
+  background: #292f33;
+  border-radius: 4px;
+}
+#debug-code-modal .debug-code-body .code-response pre::-webkit-scrollbar-thumb:hover {
+  background: #1a1e20;
+}
+#debug-code-modal .debug-code-body .code-response.active {
+  height: auto;
+  opacity: 1;
+}
+
+.white-theme #btn-debug-code {
+  background-color: #000;
+}
+.white-theme #debug-code-modal {
+  background-color: #3a4248;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
+}
+.white-theme #debug-code-modal .debug-code-header .debug-code-title {
+  color: #FFF;
+}
+.white-theme #debug-code-modal .debug-code-header .debug-code-close path {
+  fill: #c1c1c1;
+}
+.white-theme #debug-code-modal .debug-code-body .code-group .params-group .code-params {
+  color: #FFF;
+}
+.white-theme #debug-code-modal .debug-code-body .code-response pre {
+  background-color: #272822;
+}/*# sourceMappingURL=detiw.css.map */

@@ -1,0 +1,30 @@
+@import "theme";
+
+$font_Thin: 100;
+$font_ExtraLight: 200;
+$font_Light: 300;
+$font_Regular: 400;
+$font_Medium: 500;
+$font_SemiBold: 600;
+$font_Bold: 700;
+$font_ExtraBold: 800;
+$media_min_xsm: 375px;
+$media_max_xsm: 374.98px;
+$media_min_sm: 576px;
+$media_max_sm: 575.98px;
+$media_min_md: 768px;
+$media_max_md: 767.98px;
+$media_min_lg: 992px;
+$media_max_lg: 991.98px;
+$media_min_xl: 1200px;
+$media_max_xl: 1199.98px;
+
+body {
+  @import "layouts";
+  @import "structure";
+  @import "login";
+  @import "landing";
+  @import "custom";
+  @import "profile";
+  @import "user_custom_form";
+}

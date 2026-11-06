@@ -162,11 +162,15 @@ class Phr_setting_working_time
 
         $from = new DateTime($fromtime);
         $to   = new DateTime($totime);
+        // กะข้ามคืน (เช่น 22:00 - 06:00) ให้เวลาสิ้นสุดเป็นวันถัดไป ไม่งั้น diff ได้ 16 ชม. แทน 8 ชม.
+        if ($to <= $from) {
+          $to->modify('+1 day');
+        }
 
         $interval = $from->diff($to);
 
         // hour in day
-        $sum_minute_day = ($interval->h * 60) + $interval->i;
+        $sum_minute_day = ($interval->days * 24 * 60) + ($interval->h * 60) + $interval->i;
 
         // sum hour
         $sum_minute += $sum_minute_day;
@@ -193,6 +197,18 @@ class Phr_setting_working_time
     $i_data['minute_total'] = $minute_total;
     $i_data['count_user']   = 0;
     $i_data['sum_day_work'] = $sum_day_work;
+
+    // checkbox ที่ไม่ติ๊กจะไม่ถูกส่งมา ต้องตั้งเป็น 0 เหมือนตอน update ไม่งั้นกะใหม่จะไม่เช็คสาย
+    $key_check_is = [
+      'is_late_minute',
+      'is_very_late_minute',
+      'is_missing_minute'
+    ];
+    foreach ($key_check_is as $key => $value) {
+      if (!isset($i_data[$value])) {
+        $i_data[$value] = 0;
+      }
+    }
 
     $api = Amst::insert($code . '_setting_working_time', $i_data);
     if (isset($api['response_status']) && ($api['response_status'] == true)) {
@@ -274,11 +290,15 @@ class Phr_setting_working_time
 
         $from = new DateTime($fromtime);
         $to   = new DateTime($totime);
+        // กะข้ามคืน (เช่น 22:00 - 06:00) ให้เวลาสิ้นสุดเป็นวันถัดไป ไม่งั้น diff ได้ 16 ชม. แทน 8 ชม.
+        if ($to <= $from) {
+          $to->modify('+1 day');
+        }
 
         $interval = $from->diff($to);
 
         // hour in day
-        $sum_minute_day = ($interval->h * 60) + $interval->i;
+        $sum_minute_day = ($interval->days * 24 * 60) + ($interval->h * 60) + $interval->i;
 
         // sum hour
         $sum_minute += $sum_minute_day;
@@ -349,7 +369,7 @@ class Phr_setting_working_time
           ]
         ];
         $api_update = Amst::update('sys_user', $u_data, $u_where);
-        if (isset($api_update['response_status']) && ($api['response_status'] == true)) {
+        if (isset($api_update['response_status']) && ($api_update['response_status'] == true)) {
           $count = Amst::count('sys_user', ['working_time_type_id' => $to_id]);
           Amst::updateByID($code . '_setting_working_time', ['count_user' => $count], $to_id);
         }

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
+  <g id="Group_95925" data-name="Group 95925" transform="translate(-845 -250)">
+    <rect id="Rectangle_107003" data-name="Rectangle 107003" width="120" height="40" rx="10" transform="translate(845 250)" fill="#dbdcdf"/>
+    <path id="cloud-computing" d="M17.646,3.959A7.5,7.5,0,0,0,3.663,6.106,4.485,4.485,0,0,0,4.485,15h6.389V9.323L9.44,10.757A.677.677,0,0,1,8.483,9.8l2.59-2.589a.677.677,0,0,1,.957,0L14.619,9.8a.677.677,0,1,1-.957.957L12.228,9.323V15h5.353a5.521,5.521,0,0,0,.064-11.041Zm0,0" transform="translate(860.898 261)" fill="#676a6f"/>
+    <text id="อัปโหลด" transform="translate(894 275)" fill="#676a6f" font-size="16" font-family="Sarabun-Medium, Sarabun" font-weight="500"><tspan x="0" y="0">อัปโหลด</tspan></text>
+  </g>
+</svg>

@@ -137,7 +137,7 @@ class Phr_setting_deduct_money
       'insert_id' => false
     ];
 
-    $count_user = count($data['role_use']);
+    $count_user = isset($data['role_use']) && $data['role_use'] ? count($data['role_use']) : 0; // ไม่ติ๊ก role เลยจะ TypeError บน PHP 8
 
     $i_data                   = $data;
     $i_data['type_calculate'] = 'month'; // FIX
@@ -213,7 +213,7 @@ class Phr_setting_deduct_money
       return Amst::repError('E0005', 'tbl_setting_deduct_money not found.');
     }
     
-    $count_user = count($data['role_use']);
+    $count_user = isset($data['role_use']) && $data['role_use'] ? count($data['role_use']) : 0; // ไม่ติ๊ก role เลยจะ TypeError บน PHP 8
 
     $u_data                   = $data;
     $u_data['type_calculate'] = 'month'; // FIX

@@ -130,18 +130,14 @@ class Phr_ot
       //   'insert_date_time[~]' => $date_now
       // ]
     ];
-    $count_ot  = Amst::count($code . '_ot', $where_count);
+    // นับรวมรายการที่ถูกลบ (soft delete) ด้วย กันเลขคำขอซ้ำหลังมีการลบ
+    $count_ot  = Amst::count($code . '_ot', $where_count, ['show_all' => true]);
     $count_ot  = $count_ot + 1;
     $number_no = str_pad($count_ot, 5, '0',STR_PAD_LEFT);
     $no        = 'OT' . $date_set . $number_no;
 
-    // cal day
-    $dateStart = new DateTime($data['date'] . ' ' . $data['from_time']);
-    $dateEnd   = new DateTime($data['date'] . ' ' . $data['to_time']);
-
-    $interval = $dateStart->diff($dateEnd);
-
-    $hour_total = $interval->h;
+    // คำนวณจำนวนชั่วโมง (รองรับ OT ข้ามเที่ยงคืน)
+    $hour_total = static::_calHourTotal($data['date'], $data['from_time'], $data['to_time']);
 
     $i_data                   = $data;
     $i_data['no']             = $no;
@@ -162,6 +158,8 @@ class Phr_ot
         ]
       ];
       $manager_list  = Amst::select('sys_user', '*', $where_user_send_noti);
+      // กันกรณีไม่มีผู้จัดการ -> ตัวแปรยังไม่ถูกสร้างแล้ว foreach error
+      $noti_data_list = [];
       foreach ($manager_list as $key => $manager_record) {
         $noti_data = [
           'user_id'       => $manager_record['id'],
@@ -207,16 +205,11 @@ class Phr_ot
       return Amst::repError('E0005', 'tbl_ot not found.');
     }
 
-    // cal day
-    $dateStart = new DateTime($data['from_date']);
-    $dateEnd   = new DateTime($data['to_date']);
-
-    $interval = $dateStart->diff($dateEnd);
-
-    $hour_total = $interval->h;
-
-    $u_data               = $data;
-    $u_data['hour_total'] = $hour_total;
+    $u_data = $data;
+    // ฟิลด์ต้องตรงกับตอนเพิ่ม (date / from_time / to_time) เดิมอ่าน from_date / to_date ที่ไม่มีอยู่จริง
+    if (isset($data['date'], $data['from_time'], $data['to_time']) && $data['date'] && $data['from_time'] && $data['to_time']) {
+      $u_data['hour_total'] = static::_calHourTotal($data['date'], $data['from_time'], $data['to_time']);
+    }
 
     $api = Amst::updateByID($code . '_ot', $u_data, $id);
     if (isset($api['response_status']) && ($api['response_status'] == true)) {
@@ -242,6 +235,23 @@ class Phr_ot
       return Amst::repSuccess($rep);
     }
     return $api; // ERROR SURE
+  }
+
+  /**
+   * คำนวณจำนวนชั่วโมง OT (ปัดเศษนาทีทิ้ง เพราะคอลัมน์ hour_total เป็น INT)
+   * ถ้าเวลาสิ้นสุดน้อยกว่า/เท่ากับเวลาเริ่ม ถือว่าข้ามไปวันถัดไป
+   */
+  private static function _calHourTotal($date, $from_time, $to_time)
+  {
+    $date_start = new DateTime($date . ' ' . $from_time);
+    $date_end   = new DateTime($date . ' ' . $to_time);
+    if ($date_end <= $date_start) {
+      $date_end->modify('+1 day');
+    }
+
+    $interval = $date_start->diff($date_end);
+    // ใช้ days * 24 + h เพื่อไม่ให้ชั่วโมงหายเมื่อช่วงเวลาเกิน 1 วัน
+    return ($interval->days * 24) + $interval->h;
   }
 
   private static function _checkDeleteOT($code, $id)

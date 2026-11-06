@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.555" height="20" viewBox="0 0 18.555 20">
+  <g id="Group_83866" data-name="Group 83866" transform="translate(-11.198 -48.563)">
+    <path id="Path_116335" data-name="Path 116335" d="M12.326,51H28.7l1.048,1.021-1.683.791-15.742-.16-.838-.818Z" transform="translate(0 0.924)" fill="#fe635b"/>
+    <path id="Path_116336" data-name="Path 116336" d="M15.483,51V49.395l.786-.434h6.081l.636.914L22.8,51Z" transform="translate(1 0.154)" fill="#fe635b"/>
+    <g id="Group_58325" data-name="Group 58325" transform="translate(11.198 48.563)">
+      <g id="bin" transform="translate(0 0)">
+        <g id="Group_57998" data-name="Group 57998">
+          <g id="Group_57997" data-name="Group 57997">
+            <path id="Path_79028" data-name="Path 79028" d="M47.7,2.474H44.607V1.855A1.858,1.858,0,0,0,42.751,0H37.8a1.858,1.858,0,0,0-1.855,1.855v.618H32.855a1.855,1.855,0,0,0-.577,3.619l1.1,12.206A1.866,1.866,0,0,0,35.231,20H45.324a1.866,1.866,0,0,0,1.849-1.7l1.1-12.206A1.855,1.855,0,0,0,47.7,2.474ZM37.185,1.855a.619.619,0,0,1,.618-.618h4.948a.619.619,0,0,1,.618.618v.618H37.185ZM45.94,18.2a.622.622,0,0,1-.616.567H35.231a.622.622,0,0,1-.616-.567L33.527,6.185h13.5ZM47.7,4.948H32.855a.618.618,0,1,1,0-1.237H47.7a.618.618,0,1,1,0,1.237Z" transform="translate(-31)" fill="#3a4248"/>
+          </g>
+        </g>
+        <g id="Group_58000" data-name="Group 58000" transform="translate(6.121 8.315)">
+          <g id="Group_57999" data-name="Group 57999" transform="translate(0 0)">
+            <path id="Path_79029" data-name="Path 79029" d="M152.853,187.669l-.618-7.249c-.021-.248-.316-.436-.656-.421s-.6.229-.579.476l.618,7.249a.569.569,0,0,0,.617.422C152.593,188.146,152.875,187.927,152.853,187.669Z" transform="translate(-150.999 -179.999)" fill="#3a4248"/>
+          </g>
+        </g>
+        <g id="Group_58004" data-name="Group 58004" transform="translate(10.578 8.315)">
+          <g id="Group_58003" data-name="Group 58003" transform="translate(0 0)">
+            <path id="Path_79031" data-name="Path 79031" d="M317.274,180c-.34-.015-.634.173-.656.421L316,187.671c-.021.248.238.461.579.476s.634-.173.656-.421l.618-7.249C317.874,180.229,317.615,180.016,317.274,180Z" transform="translate(-315.999 -180)" fill="#3a4248"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

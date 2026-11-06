@@ -6,7 +6,9 @@ $where = [
 ];
 
 if ($_POST['month_filter']) {
-  $where['status_update_datetime[<>]'] = [date($_POST['month_filter'] . '-01 00:00:00'), date($_POST['month_filter'] . '-t 23:59:59')];
+  // 't' ต้องคำนวณจากเดือนที่เลือก (เดิมได้จำนวนวันของเดือนปัจจุบัน เช่น 2026-02-30)
+  $month_start = strtotime($_POST['month_filter'] . '-01');
+  $where['status_update_datetime[<>]'] = [date('Y-m-01 00:00:00', $month_start), date('Y-m-t 23:59:59', $month_start)];
 }
 
 $options = [

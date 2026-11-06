@@ -1,0 +1,62 @@
+{
+  "follow_up": {
+    "en": "Follow up",
+    "zh-CN": ""
+  },
+  "my_calendar": {
+    "en": "My Calendar",
+    "zh-CN": ""
+  },
+  "team_calendar": {
+    "en": "Team Calendar",
+    "zh-CN": ""
+  },
+  "meeting": {
+    "en": "Meeting",
+    "zh-CN": ""
+  },
+  "opportunity": {
+    "en": "Opportunity",
+    "zh-CN": ""
+  },
+  "case": {
+    "en": "Case",
+    "zh-CN": ""
+  },
+  "case_management": {
+    "en": "Case Management",
+    "zh-CN": ""
+  },
+  "billing_record": {
+    "en": "Billing Record",
+    "zh-CN": ""
+  },
+  "accounting": {
+    "en": "Accounting",
+    "zh-CN": ""
+  },
+  "report": {
+    "en": "Report",
+    "zh-CN": ""
+  },
+  "solicitor_dashboard": {
+    "en": "Solicitor Dashboard",
+    "zh-CN": ""
+  },
+  "setting": {
+    "en": "Setting",
+    "zh-CN": ""
+  },
+  "client_setting": {
+    "en": "Client Settings",
+    "zh-CN": ""
+  },
+  "staff_setting": {
+    "en": "Staff Settings",
+    "zh-CN": ""
+  },
+  "master_data_setting": {
+    "en": "Master Data Settings",
+    "zh-CN": ""
+  }
+}

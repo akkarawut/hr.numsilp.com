@@ -51,8 +51,14 @@ class phr_leave_work
     }
 
     if ((isset($where['from_date']) && $where['from_date']) && (isset($where['to_date']) && $where['to_date'])) {
-      $sql_where['AND']['insert_date_time[>=]'] = $where['from_date'];
-      $sql_where['AND']['insert_date_time[<=]'] = $where['to_date'];
+      // ใส่เวลาให้ครอบคลุมทั้งวัน ไม่งั้นรายการที่ยื่นในวันสุดท้ายจะหลุด
+      $sql_where['AND']['insert_date_time[>=]'] = $where['from_date'] . ' 00:00:00';
+      $sql_where['AND']['insert_date_time[<=]'] = $where['to_date'] . ' 23:59:59';
+    }
+
+    // กรองตามเดือน (Y-m) จาก dropdown เดือนในหน้าประวัติการลา
+    if (isset($where['date']) && $where['date']) {
+      $sql_where['AND']['from_date[~]'] = $where['date'] . '-%';
     }
 
     $selected_fields = Amst::getSelectedFields($options);
@@ -74,7 +80,7 @@ class phr_leave_work
 
     $where_file = [
       'AND' => [
-        'code[~]' => $code . '_leave_work_' . $record['id'] . '_%'
+        'code[~]' => str_replace('_', '\_', $code . '_leave_work_' . $record['id'] . '_') . '%' // escape _ ไม่ให้เป็น wildcard ของ LIKE
       ]
     ];
     $code_files = Amst::select('sys_file', 'code', $where_file);
@@ -141,7 +147,8 @@ class phr_leave_work
       //   'insert_date_time[~]' => $date_now
       // ]
     ];
-    $count_leave = Amst::count($code . '_leave_work', $where_count);
+    // นับรวมรายการที่ถูกลบ (soft delete) ด้วย กันเลขคำขอซ้ำหลังมีการลบ
+    $count_leave = Amst::count($code . '_leave_work', $where_count, ['show_all' => true]);
     $count_leave = $count_leave + 1;
     $number_no   = str_pad($count_leave, 5, '0', STR_PAD_LEFT);
     $no          = 'L' . $date_set . $number_no;
@@ -165,12 +172,18 @@ class phr_leave_work
 
     $sum_day_leave_work = $loop;
 
+    // แถว draft (รออนุมัติ) ไม่ได้ตั้ง is_last จึงต้องเช็คแยก ไม่งั้นยื่นลาวันเดิมซ้ำได้
     $where_dup = [
       'AND' => [
-        'user_id'        => $data['user_id'],
-        'status_checkin' => ['leave_work', 'draft_leave_work'],
-        'date'           => $check_date,
-        'is_last'        => 1
+        'user_id' => $data['user_id'],
+        'date'    => $check_date,
+        'OR'      => [
+          'AND #approved_leave' => [
+            'status_checkin' => 'leave_work',
+            'is_last'        => 1
+          ],
+          'status_checkin #draft_leave' => 'draft_leave_work'
+        ]
       ]
     ];
     $check_dup = Amst::get($code . '_checkin', ['id'], $where_dup);
@@ -246,6 +259,8 @@ class phr_leave_work
         ]
       ];
       $user_send_noti_list  = Amst::select('sys_user', '*', $where_user_send_noti);
+      // กันกรณีไม่มี HR / ผู้จัดการ -> ตัวแปรยังไม่ถูกสร้างแล้ว foreach error
+      $noti_data_list = [];
       foreach ($user_send_noti_list as $key => $user_send_noti_record) {
         $noti_data = [
           'user_id'       => $user_send_noti_record['id'],

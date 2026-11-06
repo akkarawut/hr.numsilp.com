@@ -1,0 +1,245 @@
+body .fc .fc-toolbar-title {
+  font-size: 18px;
+  margin-left: 10px;
+  color: var(--v2-color-primary);
+  font-weight: 600;
+}
+body .fc .fc-h-event {
+  border: none;
+}
+body .fc .fc-button {
+  font-size: 15px;
+  text-transform: capitalize;
+  font-weight: 500;
+  position: relative;
+  outline: none;
+  box-shadow: unset;
+  border-radius: 0;
+  border-bottom: 0;
+  min-width: 65px;
+}
+body .fc .fc-button .fc-icon {
+  color: var(--v2-color-primary);
+}
+body .fc .fc-button:focus, body .fc .fc-button:active, body .fc .fc-button:visited {
+  outline: none;
+  box-shadow: unset;
+  background-color: var(--v2-color-select-input);
+}
+body .fc .fc-button.fc-button-primary {
+  background-color: var(--color-dark-or-light);
+  color: var(--v2-color-text-info);
+  border-color: var(--v2-color-border);
+}
+body .fc .fc-button.fc-button-primary.fc-button-active {
+  background-color: var(--v2-color-select-input);
+  color: var(--v2-color-primary);
+  border-color: var(--v2-color-border);
+}
+body .fc .fc-button.fc-button-primary.fc-button-active::after {
+  content: "";
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  background: var(--v2-color-primary);
+  left: 0;
+}
+body .fc .fc-button.fc-button-primary.fc-today-button {
+  color: var(--v2-color-primary);
+  border-left: none;
+  border-right: none;
+}
+body .fc .fc-button.fc-button-primary.fc-prev-button {
+  border-right: none;
+}
+body .fc .fc-button.fc-button-primary.fc-next-button {
+  border-left: none;
+}
+body .fc .fc-button-primary:not(:disabled).fc-button-active:focus,
+body .fc .fc-button-primary:not(:disabled):active:focus {
+  outline: none;
+  box-shadow: unset;
+  background-color: var(--v2-color-select-input);
+  color: var(--v2-color-text-info);
+  border-color: transparent;
+}
+body .fc .fc-button-primary:not(:disabled).fc-button-active:focus:focus, body .fc .fc-button-primary:not(:disabled).fc-button-active:focus:active, body .fc .fc-button-primary:not(:disabled).fc-button-active:focus:visited,
+body .fc .fc-button-primary:not(:disabled):active:focus:focus,
+body .fc .fc-button-primary:not(:disabled):active:focus:active,
+body .fc .fc-button-primary:not(:disabled):active:focus:visited {
+  outline: none;
+  box-shadow: unset;
+  background-color: var(--v2-color-select-input);
+  border-color: transparent;
+}
+body .fc .fc-daygrid-day-top {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 4px 4px 10px;
+}
+body .fc .fc-daygrid-day-top a {
+  color: var(--v2-color-text-info);
+}
+body .fc-direction-ltr .fc-daygrid-event.fc-event-start,
+body .fc-direction-rtl .fc-daygrid-event.fc-event-end {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+body .fc-daygrid-event {
+  border-radius: 20px;
+  padding: 0 10px;
+}
+body .fc .fc-scroller-harness th {
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-left: 0;
+  border-right: 0;
+}
+body .fc .fc-scroller-harness th a {
+  color: var(--v2-color-text-placeholder);
+}
+body .fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0;
+}
+body .fc .fc-button-group {
+  height: 50px;
+}
+body .fc-day-other {
+  background-color: var(--v2-color-table-secondary);
+}
+body .scope_mini_calendar .ui-datepicker-inline {
+  width: 100%;
+}
+body .scope_mini_calendar .ui-datepicker-calendar tr td a {
+  background: var(--color-dark-or-light);
+  border: none;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+body .scope_mini_calendar .ui-datepicker-calendar tr td a.ui-state-active {
+  background-color: var(--v2-color-primary);
+  border-radius: 50%;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .scope_mini_calendar .ui-datepicker-title {
+  color: var(--v2-color-primary);
+}
+body .scope_mini_calendar .ui-datepicker-header {
+  position: relative;
+  padding: 0.2em 0;
+  background: var(--color-dark-or-light);
+  border: none;
+}
+body .scope_mini_calendar .ui-state-hover.ui-datepicker-next-hover {
+  right: 2px;
+  top: 2px !important;
+}
+body .scope_mini_calendar .ui-state-hover.ui-datepicker-prev-hover,
+body .scope_mini_calendar .ui-state-hover.ui-datepicker-next-hover {
+  top: 2px !important;
+  background: var(--color-dark-or-light);
+  border: none;
+  cursor: pointer;
+}
+body .scope_mini_calendar .ui-datepicker-prev {
+  right: 25px;
+  left: unset;
+}
+body .scope_mini_calendar .ui-datepicker-prev span {
+  background-image: url("../image/arrow.svg") !important;
+  background-position: center !important;
+  transform: rotate(-180deg);
+}
+body .scope_mini_calendar .ui-datepicker-next span {
+  background-image: url("../image/arrow.svg") !important;
+  background-position: center !important;
+}
+body .scope_mini_calendar .ui-datepicker-title {
+  margin: 0 13px;
+  line-height: 1.8em;
+  text-align: left;
+}
+body .footer-calendar {
+  background-color: var(--v2-color-select-input);
+  color: var(--v2-color-text-info);
+  font-weight: 500;
+  padding: 10px;
+}
+body .header-title-calendar {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 10px;
+}
+body .header-title-calendar.bg-color-calendar {
+  background-color: #FFC107;
+  color: var(--v2-color-text-info);
+}
+body .header-title-calendar.bg-color-calendar.primary {
+  background-color: #76d8ff;
+}
+body .header-title-calendar.bg-color-calendar.warning {
+  background-color: #FFC107;
+}
+body .header-title-calendar.bg-color-calendar.danger {
+  background-color: #ec3030;
+}
+body .header-title-calendar.bg-color-calendar.success {
+  background-color: #219665;
+}
+body .card-calendar {
+  background-color: var(--color-dark-or-light);
+  height: calc(100vh - 150px);
+}
+body .card-calendar.primary .fc-header-toolbar {
+  background-color: #76d8ff;
+}
+body .card-calendar.warning .fc-header-toolbar {
+  background-color: #FFC107;
+}
+body .card-calendar.danger .fc-header-toolbar {
+  background-color: #ec3030;
+}
+body .card-calendar.success .fc-header-toolbar {
+  background-color: #219665;
+}
+body .card-calendar .fc-header-toolbar {
+  background-color: #FFC107;
+}
+body .card-calendar .fc-header-toolbar .fc-toolbar-title {
+  color: var(--v2-color-text-info);
+  display: inline-block;
+  font-size: 16px;
+}
+body .card-calendar .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0;
+  padding: 0px 5px 5px 5px;
+}
+body .card-calendar .fc-button-group {
+  height: 30px;
+}
+body .card-calendar .fc-button {
+  min-width: 33px;
+  font-size: 12px;
+}
+body .card-calendar .fc-button.fc-today-button {
+  margin-right: 5px;
+}
+body .card-calendar .fc-button.fc-prev-button {
+  margin-right: 5px;
+}
+body .card-calendar .fc-timegrid-event .fc-event-main {
+  white-space: nowrap;
+}/*# sourceMappingURL=z.calendar.css.map */

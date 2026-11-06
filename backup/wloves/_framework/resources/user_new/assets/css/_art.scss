@@ -1,0 +1,13 @@
+.module-check-all-box {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+
+  .check-all {
+    font-size: 14px;
+    margin: 0px 5px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

@@ -28,6 +28,7 @@ if ($_POST) {
 $arr_status_leave = [
   'sick_leave' => 'ลาป่วย',
   'personal_leave' => 'ลากิจ',
+  'vacation_leave' => 'ลาพักร้อน',
 ];
 $arr_status = [
   'waiting_confirm' => 'รออนุมัติ',
@@ -126,7 +127,13 @@ $arr_status_color = [
                   <div class="text-secondary font-Medium">วันที่ต้องการลา</div>
                 </div>
                 <div class="col-md-7">
-                  <div class="font-Medium"><?= W_Main::formatDate($get_leave['from_date'], 'd/m/Y') ?></div>
+                  <div class="font-Medium">
+                    <?php if ($get_leave['from_date'] != $get_leave['to_date']) { ?>
+                      <?= W_Main::formatDate($get_leave['from_date'], 'd/m/Y') ?> - <?= W_Main::formatDate($get_leave['to_date'], 'd/m/Y') ?>
+                    <?php } else { ?>
+                      <?= W_Main::formatDate($get_leave['from_date'], 'd/m/Y') ?>
+                    <?php } ?>
+                  </div>
                 </div>
               </div>
               <hr>

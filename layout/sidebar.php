@@ -10,7 +10,14 @@
             <li class="menu <?= $submenu['name'] == $name_page ? 'active' : '' ?>">
               <a href="<?= $submenu['path_url'] ?>" class="menu-link">
                 <div class="_icon">
-                  <?= file_get_contents('assets/icons/' . $submenu['icon']) ?>
+                  <?php
+                  // ถ้าไม่ได้กำหนด icon หรือหาไฟล์ไม่เจอ ให้ใช้ไอคอนกลางแทน ไม่ให้ขึ้น Warning บนหน้าเว็บ
+                  $menu_icon_path = 'assets/icons/' . (isset($submenu['icon']) ? $submenu['icon'] : '');
+                  if (empty($submenu['icon']) || !is_file($menu_icon_path)) {
+                    $menu_icon_path = 'assets/icons/icon.svg';
+                  }
+                  echo file_get_contents($menu_icon_path);
+                  ?>
                 </div>
                 <div class="_name">
                   <?= $submenu['name'] ?>

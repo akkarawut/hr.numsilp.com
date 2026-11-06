@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40.002" height="45" viewBox="0 0 40.002 45">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.382" y1="-0.023" x2="0.657" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0087ff"/>
+      <stop offset="0.122" stop-color="#187ae6"/>
+      <stop offset="0.38" stop-color="#5659a8"/>
+      <stop offset="0.749" stop-color="#b82546"/>
+      <stop offset="1" stop-color="red"/>
+    </linearGradient>
+  </defs>
+  <g id="LOGO" transform="translate(-507.998 -170)">
+    <rect id="Rectangle_99146" data-name="Rectangle 99146" width="40" height="45" transform="translate(508 170)" fill="#fff"/>
+    <path id="Intersection_2" data-name="Intersection 2" d="M16269.9,4608.9v-34.994h2.205V4608.9Zm3.775-4.258v-33.88h2.207v33.88Zm-7.557,0v-33.88h2.207v33.88Zm11.338-5.493V4566h2.207v33.15Zm-15.119,0V4566h2.211v33.15Zm18.895-2.6v-25.785h2.211v25.785Zm-22.67,0v-25.785h2.205v25.785Zm26.561-3.93v-14.735h2.205v14.735Zm-30.449,0v-14.735h2.209v14.735Zm34.121-5.084v-5.158H16291v5.158Zm-37.791,0v-5.158h2.207v5.158Z" transform="translate(-15743.004 -4395.002)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="16.667" viewBox="0 0 10 16.667">
+  <g id="drag" transform="translate(-6 -2)">
+    <circle id="Ellipse_4230" data-name="Ellipse 4230" cx="1.667" cy="1.667" r="1.667" transform="translate(6 2)" fill="#979898"/>
+    <circle id="Ellipse_4231" data-name="Ellipse 4231" cx="1.667" cy="1.667" r="1.667" transform="translate(6 8.667)" fill="#979898"/>
+    <circle id="Ellipse_4232" data-name="Ellipse 4232" cx="1.667" cy="1.667" r="1.667" transform="translate(6 15.333)" fill="#979898"/>
+    <circle id="Ellipse_4233" data-name="Ellipse 4233" cx="1.667" cy="1.667" r="1.667" transform="translate(12.667 2)" fill="#979898"/>
+    <circle id="Ellipse_4234" data-name="Ellipse 4234" cx="1.667" cy="1.667" r="1.667" transform="translate(12.667 8.667)" fill="#979898"/>
+    <circle id="Ellipse_4235" data-name="Ellipse 4235" cx="1.667" cy="1.667" r="1.667" transform="translate(12.667 15.333)" fill="#979898"/>
+  </g>
+</svg>

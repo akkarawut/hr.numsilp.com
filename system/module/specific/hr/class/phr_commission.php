@@ -70,7 +70,7 @@ class Phr_commission {
 
     $where_file = [
       'AND' => [
-        'code[~]' => $code . '_commission_' . $record['id'] . '_%'
+        'code[~]' => str_replace('_', '\_', $code . '_commission_' . $record['id'] . '_') . '%' // escape _ ไม่ให้เป็น wildcard ของ LIKE (id=1 จะไปจับไฟล์ของ id=10-19)
       ]
     ];
     $code_files = Amst::select('sys_file', 'code', $where_file);
@@ -142,7 +142,8 @@ class Phr_commission {
       //   'insert_date_time[~]' => $date_now
       // ]
     ];
-    $count_commission = Amst::count($code . '_commission', $where_count);
+    // นับรวมรายการที่ถูกลบ (soft delete) ด้วย กันเลขคำขอซ้ำหลังมีการลบ
+    $count_commission = Amst::count($code . '_commission', $where_count, ['show_all' => true]);
     $count_commission = $count_commission + 1;
     $number_no        = str_pad($count_commission, 5, '0', STR_PAD_LEFT);
     $no               = 'CMS' . $number_no;
@@ -175,6 +176,8 @@ class Phr_commission {
         ]
       ];
       $hr_list  = Amst::select('sys_user', '*', $where_hr);
+      // กันกรณีไม่มี HR -> ตัวแปรยังไม่ถูกสร้างแล้ว foreach error
+      $noti_data_list = [];
       foreach ($hr_list as $key_hr => $hr_record) {
         $noti_data = [
           'user_id'       => $hr_record['id'],
@@ -231,6 +234,8 @@ class Phr_commission {
         }
       }
     }
+    // เดิมไม่ได้ return ผลลัพธ์ ผู้เรียกจะได้ null
+    return $api;
   }
 
   /**
@@ -250,7 +255,7 @@ class Phr_commission {
 
       $where_file = [
         'AND' => [
-          'code[~]' => $code . '_commission_' . $id . '_%'
+          'code[~]' => str_replace('_', '\_', $code . '_commission_' . $id . '_') . '%' // escape _ กันลบไฟล์ของรายการอื่น
         ]
       ];
       $code_files = Amst::select('sys_file', 'code', $where_file);

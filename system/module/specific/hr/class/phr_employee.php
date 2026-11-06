@@ -270,18 +270,18 @@ class Phr_employee {
         $is_security    = $record['is_security'];
         $security_price = $record['security_price'] / 2;
 
-        if ($record['is_security'] && $record['employee_status'] != 'day') {
-          if ($record['security_unit'] == 'bath') {
-            $total_price -= $security_price;
-          } else {
-            $security_price = (($record['salary'] / 2) * ($security_price / 100));
-            $total_price -= $security_price;
-          }
-        }
-
+        // ทดลองงานไม่หักประกันสังคม -> ต้องเช็คก่อนหักออกจากยอดสุทธิ
+        // (เดิมหักไปแล้วค่อยตั้ง security_price = 0 ทำให้ยอดสุทธิไม่ตรงกับที่แสดง)
         if ($record['employee_status'] == 'trial_work') {
           $is_security    = 0;
           $security_price = 0;
+        } else if ($record['is_security'] && $record['employee_status'] != 'day') {
+          if ($record['security_unit'] == 'bath') {
+            $total_price -= $security_price;
+          } else {
+            $security_price = (($record['salary'] / 2) * ($record['security_price'] / 100));
+            $total_price -= $security_price;
+          }
         }
 
         // gen no record
@@ -1170,6 +1170,9 @@ class Phr_employee {
       if (isset($options['is_performance']) && $options['is_performance']) {
         $percent_performance = 100;
 
+        // รีเซ็ตทุกแถว ไม่งั้นค่า working_end_date ของพนักงานทดลองงานจะค้างไปแถวถัดไป
+        $date_end = date('Y-m-t');
+
         $working_start_date = $record['working_start_date'];
         if ($record['employee_status'] != 'trial_work') {
           if ($working_start_date <= $date_first) {
@@ -1815,7 +1818,7 @@ class Phr_employee {
       'update_result' => false
     ];
 
-    $model = Amst::getByID('sys_user', ['id', 'working_time_type_id', 'branch_id', 'last_image_others', 'employee_status'], $id);
+    $model = Amst::getByID('sys_user', ['id', 'working_time_type_id', 'branch_id', 'last_image_others', 'employee_status', 'is_trial_work'], $id);
     if (!isset($model['id'])) {
       return Amst::repError('E0005', 'tbl_user not found.');
     }
@@ -1836,8 +1839,12 @@ class Phr_employee {
     ];
 
     $u_data = $data;
-    $u_data['is_trial_work']      = 0;
-    $u_data['sum_day_trial_work'] = 0;
+    // พนักงานที่เคยทดลองงาน (ผ่านแล้วเป็น month) ต้องคง is_trial_work ไว้
+    // ไม่งั้นแก้ข้อมูลแล้วจะหายจากหน้าประวัติการประเมินทดลองงาน
+    if (empty($model['is_trial_work'])) {
+      $u_data['is_trial_work']      = 0;
+      $u_data['sum_day_trial_work'] = 0;
+    }
 
     if ($model['employee_status'] == 'trial_work') {
       // cal day

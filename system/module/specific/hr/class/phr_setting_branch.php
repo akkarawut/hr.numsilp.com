@@ -294,7 +294,7 @@ class Phr_setting_branch
           ]
         ];
         $api_update = Amst::update('sys_user', $u_data, $u_where);
-        if (isset($api_update['response_status']) && ($api['response_status'] == true)) {
+        if (isset($api_update['response_status']) && ($api_update['response_status'] == true)) {
           $count = Amst::count('sys_user', ['branch_id' => $to_id]);
           Amst::updateByID($code . '_setting_branch', ['count_user' => $count], $to_id);
         }

@@ -1,0 +1,80 @@
+.theme-summernote img {
+  max-width: 100%;
+}
+.theme-summernote img.note-float-left {
+  margin-right: 10px;
+}
+.theme-summernote img.note-float-right {
+  margin-left: 10px;
+}
+.theme-summernote .note-editor.note-frame .note-editing-area .note-editable {
+  background-color: var(--v2-color-bg-card);
+}
+.theme-summernote .note-editor.note-frame .note-statusbar .note-resizebar {
+  background-color: var(--v2-color-bg-card);
+}
+.theme-summernote .note-editor .note-toolbar {
+  background-color: var(--v2-color-bg-card);
+}
+.theme-summernote .note-editor.note-frame {
+  border: 1px solid var(--v2-color-bg-card);
+  border-radius: 0.2rem;
+}
+.theme-summernote .note-editor.note-frame .note-statusbar {
+  border-top: none;
+}
+.theme-summernote .note-btn-group .note-btn {
+  border: none;
+  padding: 0.28rem 0.65rem;
+  font-size: 13px;
+  background-color: var(--v2-color-bg-card);
+  color: var(--v2-color-text-info);
+  min-height: auto;
+}
+.theme-summernote .note-editor .note-toolbar > .note-btn-group,
+.theme-summernote .note-popover .popover-content > .note-btn-group {
+  border: 1px solid var(--v2-color-bg-card);
+  border-radius: 0.2rem;
+}
+
+.note-modal .note-modal-content {
+  border-radius: 15px;
+}
+.note-modal .note-modal-content .note-modal-header {
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  border: 0;
+  border-bottom: 1px solid #ededef;
+  text-transform: uppercase;
+}
+.note-modal .note-modal-content .note-modal-body {
+  padding: 20px 20px;
+  border-bottom: 1px solid #ededef;
+}
+.note-modal .note-modal-content .note-modal-body .form-group {
+  padding-bottom: 10px;
+}
+.note-modal .note-modal-content .note-modal-body .form-group .note-form-label {
+  font-size: 15px;
+  font-weight: 500;
+}
+.note-modal .note-modal-content .note-modal-body .checkbox label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.note-modal .note-modal-content .note-modal-body .checkbox label input {
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+.note-modal .note-modal-content .note-modal-footer {
+  padding: 20px 20px;
+  height: 85px;
+}
+.note-modal .note-modal-content .note-modal-footer .btn {
+  padding: 0 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}/*# sourceMappingURL=z.note.css.map */

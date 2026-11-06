@@ -7,7 +7,7 @@ class Phr_setting_basic {
       'id'             => 1,
       'is_security'    => 1,
       'security_price' => 250,
-      'security_unit'  => 'month',
+      'security_unit'  => 'bath', // ระบบรู้จักแค่ bath / percent ('month' จะถูกคิดเป็น 250%)
       'tax'            => 3,
     ];
 
@@ -68,7 +68,10 @@ class Phr_setting_basic {
       return Amst::repError('E0005', 'tbl_setting_basic not found.');
     }
 
-    $data['is_security'] = isset($data['is_security']) ? $data['is_security'] : 0;
+    // ฟอร์มภาษีส่งมาแค่ tax -> ห้ามตั้ง is_security เป็น 0 (เดิมบันทึกภาษีแล้วปิดการหักประกันสังคมไปด้วย)
+    if (!isset($data['is_security']) && !isset($data['tax'])) {
+      $data['is_security'] = 0;
+    }
 
     return Amst::updateByID($code.'_setting_basic', $data, 1);
   }

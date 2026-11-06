@@ -1,0 +1,1637 @@
+{
+  "welcome": {
+    "en": "Welcome!",
+    "th": "ยินดีต้อนรับ"
+  },
+  "to_wloves": {
+    "en": "To WLoves Management System",
+    "th": "เข้าสู่ระบบการจัดการหลังบ้านของ WLoves"
+  },
+  "add_page": {
+    "en": "Add Page",
+    "th": "เพิ่มหน้า"
+  },
+  "dev_mode": {
+    "en": "Dev mode",
+    "th": "โหมดนักพัฒนา"
+  },
+  "id": {
+    "en": "ID",
+    "th": "ไอดี"
+  },
+  "unknown": {
+    "en": "Unknown",
+    "th": "ไม่ระบุตัวตน"
+  },
+  "user_login": {
+    "en": "User login",
+    "th": "เข้าสู่ระบบในฐานะผู้ใช้งาน"
+  },
+  "manage_pro": {
+    "en": "Manage profile",
+    "th": "จัดการข้อมูลส่วนตัว"
+  },
+  "log_out": {
+    "en": "Log out",
+    "th": "ออกจากระบบ"
+  },
+  "light_mode": {
+    "en": "Light mode",
+    "th": "โหมดกลางวัน"
+  },
+  "dark_mode": {
+    "en": "Dark mode",
+    "th": "โหมดกลางคืน"
+  },
+  "core": {
+    "en": "Core",
+    "th": "ระบบหลัก"
+  },
+  "manda_config": {
+    "en": "Mandatory configure",
+    "th": "กำหนดค่าบังคับ"
+  },
+  "program_setting": {
+    "en": "Program Setting",
+    "th": "ตั้งค่าโปรแกรม"
+  },
+  "module": {
+    "en": "Module",
+    "th": "โมดูล"
+  },
+  "dev": {
+    "en": "Dev",
+    "th": "สำหรับนักพัฒนา"
+  },
+  "checking": {
+    "en": "Checking",
+    "th": "การตรวจสอบ"
+  },
+  "api": {
+    "en": "API",
+    "th": "API"
+  },
+  "api_keys": {
+    "en": "API KEYs",
+    "th": "รหัสผ่าน API"
+  },
+  "database": {
+    "en": "Database",
+    "th": "ฐานข้อมูล"
+  },
+  "school": {
+    "en": "School",
+    "th": "สำนัก"
+  },
+  "program_info": {
+    "en": "Program general information",
+    "th": "ข้อมูลทั่วไปเกี่ยวกับโปรแกรม"
+  },
+  "program_detail": {
+    "en": "Program general detail",
+    "th": "รายละเอียดทั่วไปเกี่ยวกับโปรแกรม"
+  },
+  "enter_detail": {
+    "en": "Enter your program detail",
+    "th": "กรุณากรอกรายละเอียดเกี่ยวกับโปรแกรมของคุณ"
+  },
+  "set_data": {
+    "en": "and setting base data",
+    "th": "และตั้งค่าข้อมูลพื้นฐาน"
+  },
+  "general_info": {
+    "en": "GENERAL INFORMATION",
+    "th": "ข้อมูลทั่วไป"
+  },
+  "program_name": {
+    "en": "Program Name",
+    "th": "ชื่อโปรแกรม"
+  },
+  "description": {
+    "en": "Description",
+    "zh": "描述",
+    "th": "คำอธิบาย"
+  },
+  "program_owner": {
+    "en": "Program Owner",
+    "th": "ผู้ถือกรรมสิทธิ์"
+  },
+  "program_start": {
+    "en": "Program Start Date",
+    "th": "วันทีเริ่มต้นใช้งานโปรแกรม"
+  },
+  "program_timeout": {
+    "en": "Program Time Out",
+    "th": "ระยะเวลาก่อนสิ้นสุดการใช้งานโปรแกรม"
+  },
+  "program_basic": {
+    "en": "PROGRAM BASIC SETTING",
+    "th": "การตั้งค่าหลักโปรแกรม"
+  },
+  "default_curren": {
+    "en": "Default Currency",
+    "th": "สกุลเงินเริ่มต้น"
+  },
+  "service_cntct": {
+    "en": "SERVICE CONTACT",
+    "th": "ข้อมูลการติดต่อ"
+  },
+  "service_email": {
+    "en": "Service Email",
+    "th": "อีเมลสำหรับการติดต่อบริการ"
+  },
+  "enter": {
+    "en": "Enter",
+    "th": "กรอกข้อมูล"
+  },
+  "cancel": {
+    "en": "Cancel",
+    "zh": "取消",
+    "th": "ยกเลิก"
+  },
+  "save": {
+    "en": "SAVE",
+    "th": "บันทึกข้อมูล"
+  },
+  "edit_data": {
+    "en": "EDIT DATA",
+    "th": "แก้ไขข้อมูล"
+  },
+  "Language": {
+    "en": "Language",
+    "th": "ภาษา"
+  },
+  "lang_setting": {
+    "en": "Language setting",
+    "th": "ตั้งค่าภาษา"
+  },
+  "config_lang": {
+    "en": "Configure program language",
+    "th": "กำหนดภาษาของโปรแกรม"
+  },
+  "defualt_cancel": {
+    "en": "Default language can't be cancel",
+    "th": "ไม่สามารถยกเลิกค่าภาษาเริ่มต้นได้"
+  },
+  "change_personal": {
+    "en": "Everyone use this program can be change personal language follow this list.",
+    "th": "ผู้ใช้งานระบบสามารถเปลี่ยนภาษาได้ตามต้องการ ดังรายการต่อไปนี้"
+  },
+  "add_lang": {
+    "en": "ADD LANGUAGE",
+    "th": "เพิ่มภาษา"
+  },
+  "language": {
+    "en": "Language",
+    "th": "ภาษา"
+  },
+  "english": {
+    "en": "ENGLISH",
+    "th": "ภาษาอังกฤษ"
+  },
+  "defualt": {
+    "en": "DEFUALT",
+    "th": "ค่าเริ่มต้น"
+  },
+  "add_lang_prog": {
+    "en": "ADD MORE LANGUAGE TO THIS PROGRAM",
+    "th": "เพิ่มภาษาอื่น ๆ ให้กับโปรแกรม"
+  },
+  "please_select": {
+    "en": "Please Select",
+    "th": "กรุณาเลือกข้อมูล"
+  },
+  "simpli_chineses": {
+    "en": "Simplified Chinese",
+    "th": "ภาษาจีน (ตัวย่อ)"
+  },
+  "thai": {
+    "en": "Thai",
+    "th": "ภาษาไทย"
+  },
+  "add": {
+    "en": "ADD",
+    "th": "เพิ่มค่า"
+  },
+  "program_theme": {
+    "en": "Program theme & Color",
+    "th": "ธีมและสีของโปรแกรม"
+  },
+  "configure": {
+    "en": "Configure program's theme",
+    "th": "กำหนดธีมของโปรแกรม"
+  },
+  "edit_adjust": {
+    "en": "If you edit these information, all users who are using the system will get logged out to adjust the setting.",
+    "th": "หากคุณทำการแก้ไขข้อมูลนี้ ทุกคนที่กำลังใช้งานระบบจะถูกบังคับออกจากระบบเพื่อปรับปรุงข้อมูลตามที่กำหนด"
+  },
+  "highlight_color": {
+    "en": "Highlight color",
+    "th": "สีไฮไลท์"
+  },
+  "highlight_default": {
+    "en": "Use default highlight color",
+    "th": "ใช้งานสีไฮไลท์เริ่มต้น"
+  },
+  "configure_highlight": {
+    "en": "Configure highlight color to be used in the system",
+    "th": "กำหนดสีไฮไลท์สำหรับใช้ในส่วนต่าง ๆ ภายในระบบ"
+  },
+  "login_page": {
+    "en": "Login page",
+    "th": "หน้าเข้าสู่ระบบ"
+  },
+  "upload": {
+    "en": "Upload",
+    "th": "อัปโหลด"
+  },
+  "recommend_bg": {
+    "en": "Recommend: File .jpg or .png size 1920 x 1080 pixel.",
+    "th": "ไฟล์และขนาดที่แนะนำ: .jpg หรือ .png ขนาด 1920 x 1080 พิกเซล"
+  },
+  "background_img": {
+    "en": "Background image",
+    "th": "ภาพพื้นหลัง"
+  },
+  "favicon_img": {
+    "en": "Favicon image",
+    "th": "ไอคอนเว็บไซต์"
+  },
+  "recommend_icon": {
+    "en": "Recommend: File .jpg or .png size 50 x 50 pixel.",
+    "th": "ไฟล์และขนาดที่แนะนำ: .jpg หรือ .png ขนาด 50 x 50 พิกเซล"
+  },
+  "top_bar": {
+    "en": "Top bar",
+    "th": "แถบด้านบน"
+  },
+  "config_topbar": {
+    "en": "Configure theme and color of top bar",
+    "th": "กำหนดสีและธีมของ Top bar"
+  },
+  "lightmode_set": {
+    "en": "Light mode setting",
+    "th": "ตั้งค่าโหมดกลางวัน"
+  },
+  "darkmode_set": {
+    "en": "Dark mode setting",
+    "th": "ตั้งค่าโหมดกลางคืน"
+  },
+  "bg_color": {
+    "en": "Background color",
+    "th": "สีพื้นหลัง"
+  },
+  "addpage_button": {
+    "en": "Add page button color",
+    "th": "สีของปุ่ม 'เพิ่มหน้า'"
+  },
+  "addpage_bg": {
+    "en": "Add page BG hover stage",
+    "th": "สีพื้นหลัง hover ของปุ่ม 'เพิ่มหน้า'"
+  },
+  "font_topbar": {
+    "en": "Page font color",
+    "th": "สีตัวอักษรของแถบด้านบน"
+  },
+  "border_color": {
+    "en": "Border color",
+    "th": "สีขอบ"
+  },
+  "light_default": {
+    "en": "Use default light mode",
+    "th": "ตั้งโหมดกลางวันเป็นค่าเริ่มต้น"
+  },
+  "logo": {
+    "en": "Logo",
+    "th": "โลโก้"
+  },
+  "recommend_logo": {
+    "en": "Recommend: File .jpg or .png size 200 x 40 pixel.",
+    "th": "ไฟล์และขนาดที่แนะนำ: .jpg หรือ .png ขนาด 200 x 40 พิกเซล"
+  },
+  "side_nav": {
+    "en": "Side nav",
+    "th": "แถบเมนูด้านข้าง"
+  },
+  "sidenav_color": {
+    "en": "Configure theme and color of side nav",
+    "th": "กำหนดสีและธีมของ Side nav"
+  },
+  "selected_stage": {
+    "en": "Selected stage",
+    "th": "สีรายการที่กำลังใช้งานอยู่"
+  },
+  "hover_color": {
+    "en": "Hover stage",
+    "th": "สี hover"
+  },
+  "pri_font": {
+    "en": "Primary font color",
+    "th": "สีตัวอักษรหลัก"
+  },
+  "sec_font": {
+    "en": "Secondary font color",
+    "th": "สีตัวอักษรรอง"
+  },
+  "alert": {
+    "en": "Alert",
+    "th": "เตือน"
+  },
+  "alert_list": {
+    "en": "ALERT LISTS",
+    "th": "รายการการเตือน"
+  },
+  "perfect_program": {
+    "en": "Please check to complete all lists for perfect program.",
+    "th": "กรุณาตรวจสอบและทำตามข้อต่อไปนี้ให้ครบถ้วน เพื่อให้ได้โปรแกรมที่สมบูรณ์แบบ"
+  },
+  "folder_upload": {
+    "en": "If folder 'system/resource/file' is not found, the system will not be able to upload image / file on the system",
+    "th": "หา folder 'system/resource/file' ไม่พบ ระบบจะไม่สามารถอัพ image / file ต่าง ๆ ขึ้นระบบได้"
+  },
+  "folder_permission": {
+    "en": "If the permission of the folder 'system/resource/file' is not 777, general users will not be able to upload image / file on the system.",
+    "th": "folder 'system/resource/file' permission ไม่ใช่ 777 ผู้ใช้ทั่วไปจะไม่สามารถอัพ image / file ต่าง ๆ ขึ้นระบบได้"
+  },
+  "config_domain": {
+    "en": "CONFIG DOMAIN",
+    "th": "โดเมนของ Config"
+  },
+  "web_domain": {
+    "en": "WEBSITE DOMAIN",
+    "th": "โดเมนของเว็บไซต์"
+  },
+  "domain_match": {
+    "en": "Domains are matching ",
+    "th": "โดเมนตรงกัน"
+  },
+  "dowload_config": {
+    "en": "Dowload file config.php",
+    "th": "ดาวน์โหลดไฟล์ Config.php"
+  },
+  "note": {
+    "en": "Note",
+    "th": "หมายเหตุ"
+  },
+  "rec_download": {
+    "en": "recommend to download from server",
+    "th": "แนะนำให้โหลดจาก Server"
+  },
+  "module_777": {
+    "en": "Permission in module_main/core/doownload must be 777.",
+    "th": "Permission ใน module_main/core/download ต้องเป็น 777"
+  },
+  "user_type": {
+    "en": "User Type",
+    "th": "ประเภทผู้ใช้งาน"
+  },
+  "manage_user": {
+    "en": "Manage your user type.",
+    "th": "จัดการประเภทผู้ใช้งานของคุณ"
+  },
+  "add_newuser": {
+    "en": "ADD NEW USER TYPE",
+    "th": "เพิ่มประเภทผู้ใช้งานใหม่"
+  },
+  "add_usertype": {
+    "en": "ADD USER TYPE",
+    "th": "เพิ่มประเภทผู้ใช้งาน"
+  },
+  "usertype_name": {
+    "en": "User Type Name",
+    "th": "ชื่อประเภทผู้ใช้งาน"
+  },
+  "ref_info": {
+    "en": "Ref. Information",
+    "th": "ข้อมูลอ้างอิง"
+  },
+  "no_ref": {
+    "en": "No Reference",
+    "th": "ไม่มีการอ้างอิง"
+  },
+  "function": {
+    "en": "Function",
+    "th": "ฟังก์ชัน"
+  },
+  "permission": {
+    "en": "Permission",
+    "th": "การอนุญาต"
+  },
+  "hide_permis": {
+    "en": "Hide Permission",
+    "th": "ซ่อนการเข้าถึง"
+  },
+  "hide_page": {
+    "en": "Hide page and function. it will be effect with module user used this user type in main.",
+    "th": "ซ่อนหน้าและฟังก์ชันการใช้งาน โดยจะส่งผลต่อกลุ่มบุคคลที่เป็นผู้ใช้งานประเภทนี้"
+  },
+  "view": {
+    "en": "View",
+    "th": "มุมมอง"
+  },
+  "show_all": {
+    "en": "Show all",
+    "th": "แสดงทั้งหมด"
+  },
+  "hide_all": {
+    "en": "Hide all",
+    "th": "ซ่อนทั้งหมด"
+  },
+  "hide": {
+    "en": "hide",
+    "th": "ซ่อน"
+  },
+  "task": {
+    "en": "Task",
+    "th": "งาน"
+  },
+  "operation": {
+    "en": "Operation",
+    "th": "การดำเนินการ"
+  },
+  "hide_func": {
+    "en": "Hide Page/Function",
+    "th": "ซ่อนหน้า/ ฟังก์ชัน"
+  },
+  "my_task": {
+    "en": "My task",
+    "th": "งานของฉัน"
+  },
+  "task_list": {
+    "en": "Task List",
+    "th": "รายการงาน"
+  },
+  "data_setting": {
+    "en": "Data setting",
+    "th": "ตั้งค่าข้อมูล"
+  },
+  "report": {
+    "en": "Report",
+    "th": "รายงาน"
+  },
+  "asignee_dashboard": {
+    "en": "Assignee dashboard",
+    "th": "แดชบอร์ดพนักงาน"
+  },
+  "working_report": {
+    "en": "Working performance report",
+    "th": "รายงานการทำงาน"
+  },
+  "task_timeline": {
+    "en": "Task timeline report",
+    "th": "รายงานไทม์ไลน์งาน"
+  },
+  "dashboard_task": {
+    "en": "Task dashboard",
+    "th": "แดชบอร์ดงาน"
+  },
+  "dashboard_proj": {
+    "en": "Project dashboard",
+    "th": "แดชบอร์ดโปรเจกต์"
+  },
+  "user": {
+    "en": "User",
+    "th": "ผู้ใช้งาน"
+  },
+  "employee": {
+    "en": "Employee",
+    "th": "พนักงาน"
+  },
+  "manage": {
+    "en": "MANAGE",
+    "th": "การจัดการ"
+  },
+  "employ_list": {
+    "en": "Employee List",
+    "th": "รายการพนักงาน"
+  },
+  "basic_setting": {
+    "en": "BASIC SETTING",
+    "th": "ตั้งค่าพื้นฐาน"
+  },
+  "permission_template": {
+    "en": "Permission Template",
+    "th": "หน้าการอนุญาตการเข้าถึง"
+  },
+  "team": {
+    "en": "Team",
+    "th": "ทีม"
+  },
+  "coin": {
+    "en": "Coin",
+    "th": "เหรียญ"
+  },
+  "coin_quest": {
+    "en": "Coin & Quest ",
+    "th": "เหรียญและเควสต์"
+  },
+  "coin_manage": {
+    "en": "Coin management",
+    "th": "การจัดการเหรียญ"
+  },
+  "quest_manage": {
+    "en": "Quest management",
+    "th": "การจัดการเควสต์"
+  },
+  "coin_stat": {
+    "en": "Coin statistic",
+    "th": "สถิติเหรียญ"
+  },
+  "quest_overview": {
+    "en": "Quest overview",
+    "th": "ภาพรวมเควสต์"
+  },
+  "quest_stat": {
+    "en": "Quest statistic",
+    "th": "สถิติเควสต์"
+  },
+  "page": {
+    "en": "PAGE",
+    "th": "หน้า"
+  },
+  "stack": {
+    "en": "Stack",
+    "th": "เอกสาร"
+  },
+  "application": {
+    "en": "Application",
+    "th": "การสมัครงาน"
+  },
+  "variant_set": {
+    "en": "Variant Setting",
+    "th": "ตั้งค่าตัวแปร"
+  },
+  "question_qanda": {
+    "en": "Employee_Qanda",
+    "th": "คำถามพนักงาน"
+  },
+  "question_topic": {
+    "en": "Question Topic",
+    "th": "หัวข้อคำถาม"
+  },
+  "check_per": {
+    "en": "CHECK ALL PERMISSION",
+    "th": "กดเช็กการอนุญาตทั้งหมด"
+  },
+  "clear_per": {
+    "en": "CLEAR ALL PERMISSION",
+    "th": "ล้างการอนุญาตทั้งหมด"
+  },
+  "info_setting": {
+    "en": "Information Setting",
+    "th": "ตั้งค่าข้อมูล"
+  },
+  "user_info_set": {
+    "en": "USER INFORMATION SETTING",
+    "th": "ตั้งค่าข้อมูลผู้ใช้งาน"
+  },
+  "config_user": {
+    "en": "Configure function and field for user used this user type",
+    "th": "กำหนดฟังก์ชันและช่องกรอกข้อมูลสำหรับผู้ใช้งานประเภทนี้"
+  },
+  "page_function": {
+    "en": "Page/ Function",
+    "th": "หน้า / ฟังก์ชัน"
+  },
+  "field": {
+    "en": "Field",
+    "th": "ช่องกรอกข้อมูล"
+  },
+  "on_action": {
+    "en": "ON",
+    "th": "เปิด"
+  },
+  "off_action": {
+    "en": "OFF",
+    "th": "ปิด"
+  },
+  "program_login": {
+    "en": "ALLOW LOGIN ON PROGRAM",
+    "th": "อนุญาตให้เข้าสู่ระบบบนโปรแกรม"
+  },
+  "login_userpro": {
+    "en": "User use this user type can log in to this system.",
+    "th": "ผู้ใช้งานประเภทนี้สามารถเข้าสู่ระบบบนโปรแกรม"
+  },
+  "app_login": {
+    "en": "ALLOW LOGIN ON APPLICATION",
+    "th": "อนุญาตให้เข้าสู่ระบบบนแอพพลิเคชัน"
+  },
+  "login_userapp": {
+    "en": "User use this user type can log in to application.",
+    "th": "ผู้ใช้งานประเภทนี้สามารถเข้าสู่ระบบบนแอพพลิเคชัน"
+  },
+  "web_login": {
+    "en": "ALLOW LOGIN ON WEBSITE",
+    "th": "อนุญาตให้เข้าสู่ระบบบนเว็บไซต์"
+  },
+  "login_userweb": {
+    "en": "User use this user type can login to website.",
+    "th": "ผู้ใช้งานประเภทนี้สามารถเข้าสู่ระบบบนเว็บไซต์"
+  },
+  "pass_cond": {
+    "en": "PASSWORD CONDITION",
+    "th": "เงื่อนไขรหัสผ่าน"
+  },
+  "user_passscond": {
+    "en": "Require condition when configure user password.",
+    "th": "การตั้งรหัสผ่านของผู้ใช้ต้องเป็นไปตามเงื่อนไข"
+  },
+  "action_pin": {
+    "en": "ACTION PIN",
+    "th": "รหัสประจำตัว"
+  },
+  "pin_function": {
+    "en": "Open function pin on user",
+    "th": "เปิดใช้งานฟังก์ชัน รหัสประจำตัว "
+  },
+  "permission_user": {
+    "en": "Open function permission template on user info and setting.",
+    "th": "เปิดใช้งาน หน้าการอนุญาตการเข้าถึง ในข้อมูลและการตั้งค่าผู้ใช้งาน"
+  },
+  "category": {
+    "en": "CATEGORY",
+    "zh": "類別",
+    "th": "หมวดหมู่"
+  },
+  "category_user": {
+    "en": "Open function categories on user info and setting.",
+    "th": "เปิดใช้งานฟังก์ชัน หมวดหมู่ ในข้อมูลและการตั้งค่าผู้ใช้งาน"
+  },
+  "team_user": {
+    "en": "Open function team on user info and setting.",
+    "th": "เปิดใช้งานฟังก์ชัน ทีม ในข้อมูลและการตั้งค่าผู้ใช้งาน"
+  },
+  "tag": {
+    "en": "TAG ",
+    "th": "แท็ก"
+  },
+  "tag_user": {
+    "en": "Open function tag on user info and setting.",
+    "th": "เปิดใช้งานฟังก์ชัน แท็ก ในข้อมูลและการตั้งค่าผู้ใช้งาน"
+  },
+  "code_id": {
+    "en": "CODE / ID",
+    "th": "โค้ด / ไอดี"
+  },
+  "code_gen": {
+    "en": "Auto generate user code or id",
+    "th": "สร้างโค้ดหรือไอดีของผู้ใช้อัตโนมัติ"
+  },
+  "configure_code": {
+    "en": "Configure",
+    "th": "กำหนดค่า"
+  },
+  "stater_id": {
+    "en": "STARTER ID",
+    "th": "ไอดีเริ่มต้น"
+  },
+  "config_code_id": {
+    "en": "CONFIGURE USER'S STARTER CODE / ID",
+    "th": "กำหนดโค้ดและไอดีเริ่มต้นสำหรับผู้ใช้งาน"
+  },
+  "code_symb": {
+    "en": "Code / Symbol / Digit",
+    "th": "โค้ด / สัญลักษณ์ / ตัวเลข"
+  },
+  "ex_emct": {
+    "en": "Ex. EM, CT",
+    "th": "ตัวอย่าง เช่น EM, CT"
+  },
+  "none": {
+    "en": "None",
+    "th": "ไม่มี"
+  },
+  "make_defualt": {
+    "en": "Make default",
+    "th": "ตั้งเป็นค่าเริ่มต้น"
+  },
+  "cancel_language": {
+    "en": "Cancel Language",
+    "th": "ยกเลิกภาษา"
+  },
+  "default": {
+    "en": "Default",
+    "th": "ค่าเริ่มต้น"
+  },
+  "darkmode_default": {
+    "en": "Use default dark mode",
+    "th": "ตั้งโหมดกลางคืนเป็นค่าเริ่มต้น"
+  },
+  "domain_notmatch": {
+    "en": "Domains are not matching.",
+    "th": "โดเมนไม่ตรงกัน"
+  },
+  "delete_usertype": {
+    "en": "Delete User Type",
+    "th": "ลบประเภทผู้ใช้"
+  },
+  "sure_delete": {
+    "en": "Are you sure to delete {{“USER TYPE”}} from this program.",
+    "zh": "您確定要從此程式中刪除{{“USER TYPE”}}嗎",
+    "th": "คุณแน่ใจหรือไม่ว่าต้องการลบ {{“USER TYPE”}} ออกจากโปรแกรม"
+  },
+  "maybe": {
+    "en": "Maybe",
+    "zh": "或許",
+    "th": "ยกเลิก"
+  },
+  "yes_sure": {
+    "en": "Yes!! I'm Sure",
+    "zh": "我敢肯定",
+    "th": "ฉันแน่ใจ"
+  },
+  "check_all": {
+    "en": "Check All",
+    "th": "เช็กทั้งหมด"
+  },
+  "clear_all": {
+    "en": "Clear All",
+    "th": "ล้างทั้งหมด"
+  },
+  "basic_info": {
+    "en": "Basic Information",
+    "th": "ข้อมูลพื้นฐาน"
+  },
+  "profile": {
+    "en": "Profile",
+    "th": "ข้อมูลส่วนตัว"
+  },
+  "full_name": {
+    "en": "Full Name",
+    "th": "ชื่อ-นามสกุล"
+  },
+  "preferred_name": {
+    "en": "Preferred Name",
+    "th": "ชื่อเล่น"
+  },
+  "profile_img": {
+    "en": "Profile Image",
+    "th": "รูปประจำตัว"
+  },
+  "contact_detail": {
+    "en": "Contact Detail",
+    "th": "ข้อมูลการติดต่อ"
+  },
+  "address_type": {
+    "en": "Address Type",
+    "th": "ประเภทที่อยู่"
+  },
+  "address": {
+    "en": "Address",
+    "th": "ที่อยู่"
+  },
+  "tel_no": {
+    "en": "Telephone No.",
+    "th": "เบอร์โทรศัพท์"
+  },
+  "email": {
+    "en": "Email",
+    "th": "อีเมล"
+  },
+  "line_id": {
+    "en": "Line ID",
+    "th": "ไอดีไลน์"
+  },
+  "facebook": {
+    "en": "Facebook",
+    "th": "Facebook"
+  },
+  "wechat": {
+    "en": "Wechat",
+    "th": "Wechat"
+  },
+  "twitter": {
+    "en": "Twitter",
+    "th": "Twitter"
+  },
+  "instagram": {
+    "en": "Instagram",
+    "th": "Instagram"
+  },
+  "emergency_contact": {
+    "en": "Emergency Contact Person",
+    "th": "ผู้ติดต่อในกรณีฉุกเฉิน"
+  },
+  "emergency_tel": {
+    "en": "Emergency Tel No.",
+    "th": "เบอร์ติดต่อในกรณีฉุกเฉิน"
+  },
+  "relationship": {
+    "en": "Relationship",
+    "th": "ความสัมพันธ์"
+  },
+  "other_detail": {
+    "en": "Other Detail",
+    "th": "รายละเอียดอื่น ๆ"
+  },
+  "idcard_no": {
+    "en": "ID Card No.",
+    "th": "เลขบัตรประชาชน"
+  },
+  "passport_no": {
+    "en": "Passport No.",
+    "th": "เลขหนังสือเดินทาง"
+  },
+  "passport_country": {
+    "en": "Country of Passport",
+    "th": "ประเทศของหนังสือเดินทาง"
+  },
+  "nationality": {
+    "en": "Nationality",
+    "th": "สัญชาติ"
+  },
+  "religion": {
+    "en": "Religion",
+    "th": "ศาสนา"
+  },
+  "sex_gender": {
+    "en": "Sex / Gender",
+    "th": "เพศ"
+  },
+  "birthday_age": {
+    "en": "Birthday & Age",
+    "th": "วันเกิดและอายุ"
+  },
+  "multi_bank": {
+    "en": "MULTIPLE BANK ACCOUNT",
+    "th": "บัญชีธนาคารหลายบัญชี"
+  },
+  "open_bank": {
+    "en": "Open page “Bank Account” and user can configure multiple bank account",
+    "th": "ใช้งานหน้า บัญชีธนาคาร ผู้ใช้สามารถเพิ่มบัญชีธนาคารได้มากกว่าหนึ่งบัญชี"
+  },
+  "multi_address": {
+    "en": "MULTIPLE ADDRESS",
+    "th": "ทีอยู่มากกว่าหนึ่งที่"
+  },
+  "open_address": {
+    "en": "Open page “Address” and user can configure multiple address",
+    "th": "ใช้งานหน้า ที่อยู่ ผู้ใช้สามารถเพิ่มที่อยู่ได้มากกว่าหนึ่งที่"
+  },
+  "contact_person": {
+    "en": "CONTACT PERSON",
+    "th": "ผู้ติดต่อ"
+  },
+  "open_contact": {
+    "en": "Open page “Contact Person",
+    "th": "ใช้งานหน้า ผู้ติดต่อ"
+  },
+  "user_detail": {
+    "en": "USER TYPE DETAILS",
+    "th": "รายละเอียดประเภทผู้ใช้งาน"
+  },
+  "manage_userdetail": {
+    "en": "Manage user type details.",
+    "th": "จัดการรายละเอียดประเภทผู้ใช้งาน"
+  },
+  "my_profile": {
+    "en": "MY PROFILE",
+    "th": "ข้อมูลส่วนตัวของฉัน"
+  },
+  "manage_profile": {
+    "en": "Manage your General information profile.",
+    "th": "จัดการข้อมูลสวนตัวของคุณ"
+  },
+  "image": {
+    "en": "Image",
+    "zh": "影像",
+    "th": "รูปภาพ"
+  },
+  "title": {
+    "en": "Title",
+    "th": "คำนำหน้า"
+  },
+  "title_2": {
+    "en": "Title",
+    "zh": "标题",
+    "th": "หัวข้อ"
+  },
+  "name": {
+    "en": "Name",
+    "zh": "姓名",
+    "th": "ชื่อ"
+  },
+  "surname": {
+    "en": "Surname",
+    "th": "นามสกุล"
+  },
+  "tel_number": {
+    "en": "Telephone Number",
+    "th": "เบอร์โทรศัพท์"
+  },
+  "login_system": {
+    "en": "Login System",
+    "th": "การเข้าสู่ระบบ"
+  },
+  "user_system": {
+    "en": "User log in account to use this system",
+    "th": "ผู้ใช้งานเข้าสู่ระบบบัญชีเพื่อใช้งานระบบ"
+  },
+  "username": {
+    "en": "Username",
+    "th": "ชื่อผู้ใช้"
+  },
+  "password": {
+    "en": "Password",
+    "th": "รหัสผ่าน"
+  },
+  "last_update": {
+    "en": "Last Update",
+    "zh": "最後更新",
+    "th": "อัปเดตล่าสุด"
+  },
+  "login_socialmedia": {
+    "en": "LOGIN WITH SOCIAL MEDIA",
+    "th": "เข้าสู่ระบบด้วยบัญชีโซเชียลมีเดีย"
+  },
+  "login_sc": {
+    "en": "Connect social media for use login system later.",
+    "th": "เชื่อมต่อกับโซเชียลมีเดียเพื่อเข้าสู่ระบบในภายหลัง"
+  },
+  "connect_facebook": {
+    "en": "Connect with Facebook",
+    "th": "เชื่อมต่อกับ Facebook"
+  },
+  "connect_google": {
+    "en": "Connect with Google",
+    "th": "เชื่อมต่อกับ Google"
+  },
+  "connect_apple": {
+    "en": "Connect with Apple Account",
+    "th": "เชื่อมต่อกับบัญชี Apple"
+  },
+  "syn_config": {
+    "en": "Synchronization is not configured",
+    "th": "ยังไม่ได้กำหนดการซิงค์"
+  },
+  "connect": {
+    "en": "CONNECT",
+    "th": "เชื่อมต่อ"
+  },
+  "pass_edit": {
+    "en": "EDIT PASSWORD",
+    "th": "แก้ไขรหัสผ่าน"
+  },
+  "old_pass": {
+    "en": "Old Password",
+    "th": "รหัสผ่านเดิม"
+  },
+  "new_pass": {
+    "en": "New Password",
+    "th": "รหัสผ่านใหม่"
+  },
+  "confirmed_pass": {
+    "en": "Confirm Password",
+    "th": "ยืนยันรหัสผ่าน"
+  },
+  "confirm": {
+    "en": "confirm",
+    "zh": "確認",
+    "th": "ยืนยัน"
+  },
+  "log_error": {
+    "en": "LOG ERROR",
+    "th": "LOG ผิดพลาด"
+  },
+  "check_them": {
+    "en": "Check Them All!",
+    "th": "ไปเช็กด้วยล่ะ"
+  },
+  "excellent": {
+    "en": "excellent",
+    "th": "เยี่ยม"
+  },
+  "go_check": {
+    "en": "go check!",
+    "th": "เช็กด่วน"
+  },
+  "disater": {
+    "en": "disaster",
+    "th": "ชิบหาย"
+  },
+  "sql_log": {
+    "en": "SQL LOG",
+    "th": "SQL LOG"
+  },
+  "manage_log": {
+    "en": "Manage your LOGs.",
+    "th": "จัดการ LOG ของคุณ"
+  },
+  "info": {
+    "en": "Info",
+    "th": "ข้อมูล"
+  },
+  "log": {
+    "en": "LOG",
+    "th": "LOG"
+  },
+  "clear_sqllog": {
+    "en": "Clear sql LOG",
+    "th": "ล้าง sql LOG"
+  },
+  "backend_log": {
+    "en": "BACKEND LOG",
+    "th": "BACKEND LOG"
+  },
+  "frontend_log": {
+    "en": "FRONTEND LOG",
+    "th": "FRONTEND LOG"
+  },
+  "web_log": {
+    "en": "WEB LOG",
+    "th": "WEB LOG"
+  },
+  "manage_module": {
+    "en": "Manage Module",
+    "th": "จัดการโมดูล"
+  },
+  "module_program": {
+    "en": "Manage module on this program.",
+    "th": "จัดการโมดูลของโปรแกรมนี้"
+  },
+  "display": {
+    "en": "DISPLAY",
+    "th": "การแสดงผล"
+  },
+  "module_mode": {
+    "en": "Module mode",
+    "th": "โหมดของโมดูล"
+  },
+  "arrange_module": {
+    "en": "Arrange Module Position",
+    "th": "จัดเรียงตำแหน่งของโมดูล"
+  },
+  "module_setting": {
+    "en": "MODULE SETTING",
+    "th": "ตั้งค่าโมดูล"
+  },
+  "new_module": {
+    "en": "ADD NEW MODULE",
+    "th": "เพิ่มโมดูล"
+  },
+  "module_type": {
+    "en": "Module Type",
+    "th": "ประเภทโมดูล"
+  },
+  "select_module": {
+    "en": "Select Module",
+    "th": "เลือกโมดูล"
+  },
+  "module_name": {
+    "en": "Module Name",
+    "th": "ชื่อโมดูล"
+  },
+  "select_display": {
+    "en": "Select Display",
+    "th": "เลือกผลการแสดง"
+  },
+  "module_config": {
+    "en": "MODULE CONFIGURE",
+    "th": "กำหนดค่าโมดูล"
+  },
+  "user_typemanag": {
+    "en": "Manage User Type",
+    "th": "จัดการประเภทผู้ใช้"
+  },
+  "select_user": {
+    "en": "Select User Type",
+    "th": "เลือกประเภทผู้ใช้"
+  },
+  "admin": {
+    "en": "Admin",
+    "th": "ผู้ดูแลระบบ"
+  },
+  "multi_owner": {
+    "en": "Multiple Owner",
+    "th": "มีเจ้าของหลายคน"
+  },
+  "activate": {
+    "en": "Activate",
+    "th": "เปิดใช้งาน"
+  },
+  "ownership": {
+    "en": "Ownership",
+    "th": "เจ้าของ"
+  },
+  "single": {
+    "en": "Single",
+    "th": "เดี่ยว"
+  },
+  "single_module1": {
+    "en": "Replace the existing module with the submenu inside that module. This option is appropriate for a system with few modules but several pages to generate a proper menu design.",
+    "th": "นำหัวข้อหน้าภายในแต่ละโมดูล ออกมาแสดงเป็นเมนูแทนที่ชื่อโมดูลเดิม รูปแบบนี้เหมาะสำหรับระบบที่มีโมดูลน้อย แต่หน้าเยอะและต้องการให้มันดูเต็ม"
+  },
+  "grouping": {
+    "en": "Grouping",
+    "th": "กลุ่ม"
+  },
+  "grouping_module1": {
+    "en": "Display the modules one by one within a menu, made up of the header and page of each module.",
+    "th": "แสดงเมนูรายโมดูล ภายในประกอบด้วยหัวข้อและหน้าของแต่ละโมดูล"
+  },
+  "grouping_module2": {
+    "en": "This option is excellent for a system with multiple modules if you don't want the page to look cluttered.",
+    "th": "รูปแบบนี้เหมาะกับระบบที่มีหลายโมดูล และไม่ต้องการให้เมนูรกหรือเยอะเกินไป"
+  },
+  "select": {
+    "en": "Select",
+    "th": "เลือก"
+  },
+  "module_position": {
+    "en": "Manage module position on menu",
+    "th": "จัดการตำแหน่งของโมดูลในเมนู"
+  },
+  "arrange": {
+    "en": "Arrange",
+    "th": "จัดเรียง"
+  },
+  "fixed": {
+    "en": "FIXED",
+    "th": "ห้ามเปลี่ยนแปลง"
+  },
+  "arrange_user": {
+    "en": "ARRANGE USER MODULE INSIDE USER MANAGEMENT",
+    "th": "จัดเรียงตำแหน่งของโมดูลในรายการจัดการผู้ใช้งาน"
+  },
+  "manage_module1": {
+    "en": "Manage module position inside user management module.",
+    "th": "จัดการตำแหน่งของโมดูลในรายการจัดการผู้ใช้งาน"
+  },
+  "permission_manage": {
+    "en": "Have Permission for manage data in other person view.",
+    "th": "อนุญาตให้จัดการข้อมูลในมุมมองของบุคคลอื่น"
+  },
+  "img_code": {
+    "en": "IMAGE CODE",
+    "th": "โค้ดรูปภาพ"
+  },
+  "program_checking": {
+    "en": "Program Checking",
+    "th": "ตรวจสอบโปรแกรม"
+  },
+  "file_server": {
+    "en": "File & Server compare",
+    "th": "เปรียบเทียบไฟล์กับเซิร์ฟเวอร์"
+  },
+  "compare": {
+    "en": "COMPARE",
+    "th": "เปรียบเทียบ"
+  },
+  "log_history": {
+    "en": "LOG HISTORY",
+    "th": "ประวัติ LOG"
+  },
+  "date_compare": {
+    "en": "Date compare",
+    "th": "วันที่เปรียบเทียบข้อมูล"
+  },
+  "file_found": {
+    "en": "Found on File but don't have on server.",
+    "th": "พบในไฟล์แต่ไม่พบในเซิร์ฟเวอร์"
+  },
+  "date_modi": {
+    "en": "Date modify",
+    "th": "วันที่แก้ไขล่าสุด"
+  },
+  "by": {
+    "en": "By",
+    "th": "โดย"
+  },
+  "action": {
+    "en": "Action",
+    "th": "การดำเนินการ"
+  },
+  "table": {
+    "en": "Table",
+    "th": "รายการ"
+  },
+  "clumn_name": {
+    "en": "Column name",
+    "th": "ชื่อคอลัมน์"
+  },
+  "type": {
+    "en": "Type",
+    "zh": "類型",
+    "th": "ประเภท"
+  },
+  "installed_module": {
+    "en": "Installed Module",
+    "th": "โมดูลทีติดตั้งแล้ว"
+  },
+  "main_core": {
+    "en": "Main Core",
+    "th": "ระบบหลัก"
+  },
+  "main_wloves": {
+    "en": "Main Wloves",
+    "th": "รายการหลัก Wloves"
+  },
+  "main_user": {
+    "en": "Main User",
+    "th": "ผู้ใช้งานหลัก"
+  },
+  "main_file": {
+    "en": "Main File",
+    "th": "ไฟล์หลัก"
+  },
+  "main_connect": {
+    "en": "Main Connection",
+    "th": "การเชื่อมต่อหลัก"
+  },
+  "main_general": {
+    "en": "Main General",
+    "th": "รายการหลักทั่วไป"
+  },
+  "class": {
+    "en": "Class",
+    "th": "คลาส"
+  },
+  "parameter": {
+    "en": "PARAMETER",
+    "th": "พารามิเตอร์"
+  },
+  "call_api": {
+    "en": "CALL API",
+    "th": "เรียกใช้ API"
+  },
+  "send": {
+    "en": "send",
+    "th": "ส่ง"
+  },
+  "input": {
+    "en": "input",
+    "th": "นำเข้าข้อมูล"
+  },
+  "detail": {
+    "en": "DETAIL",
+    "th": "รายละเอียด"
+  },
+  "path": {
+    "en": "Path",
+    "th": "ตำแหน่งไฟล์"
+  },
+  "call": {
+    "en": "Call",
+    "th": "การเรียกใช้"
+  },
+  "code": {
+    "en": "CODE",
+    "th": "โค้ด"
+  },
+  "manage_apikey": {
+    "en": "MANAGE API KEY",
+    "th": "จัดการรหัส API"
+  },
+  "manage_apikey1": {
+    "en": "Manage API Key in this Program",
+    "th": "จัดการรหัส API ของโปรแกรมนี้"
+  },
+  "api_key": {
+    "en": "API Key",
+    "th": "รหัส API"
+  },
+  "add_apikey": {
+    "en": "ADD API KEY",
+    "th": "เพิ่มรหัส API"
+  },
+  "apikey_edit": {
+    "en": "EDIT API KEY",
+    "th": "แก้ไขรหัส API"
+  },
+  "edit": {
+    "en": "Edit",
+    "th": "แก้ไข"
+  },
+  "show": {
+    "en": "Show",
+    "th": "แสดง"
+  },
+  "newest": {
+    "en": "Newest",
+    "th": "ใหม่ที่สุด"
+  },
+  "lasted_update": {
+    "en": "Lasted update",
+    "th": "อัปเดตล่าสุด"
+  },
+  "oldest": {
+    "en": "Oldest",
+    "th": "เก่าที่สุด"
+  },
+  "10_page": {
+    "en": "10/page",
+    "th": "10/หน้า"
+  },
+  "15_page": {
+    "en": "15/page",
+    "th": "15/หน้า"
+  },
+  "20_page": {
+    "en": "20/page",
+    "th": "20/หน้า"
+  },
+  "all_page": {
+    "en": "All/page",
+    "th": "ทั้งหมด/หน้า"
+  },
+  "alter_db": {
+    "en": "Alter database",
+    "th": "แก้ไขฐานข้อมูล"
+  },
+  "db_schema": {
+    "en": "Database schema",
+    "th": "โครงสร้างฐานข้อมูลในระบบ"
+  },
+  "privileges": {
+    "en": "Privileges",
+    "th": "สิทธิ์"
+  },
+  "table_view": {
+    "en": "Tables and views",
+    "th": "มุมมองและตาราง"
+  },
+  "search_data": {
+    "en": "Search data in tables",
+    "th": "ค้นหาข้อมูลในตาราง"
+  },
+  "search": {
+    "en": "search",
+    "th": "ค้นหา"
+  },
+  "delete": {
+    "en": "delete",
+    "th": "ลบ"
+  },
+  "sql_command": {
+    "en": "SQL command",
+    "th": "คำสั่ง SQL"
+  },
+  "import": {
+    "en": "Import",
+    "th": "นำเข้า"
+  },
+  "export": {
+    "en": "Export",
+    "th": "ส่งออก"
+  },
+  "create_table": {
+    "en": "Create table",
+    "th": "สร้างตาราง"
+  },
+  "selected": {
+    "en": "Selected",
+    "th": "ที่เลือกอยู่"
+  },
+  "move_db": {
+    "en": "Move to other database",
+    "th": "ย้ายไปยังฐานข้อมูลอื่น"
+  },
+  "analyze": {
+    "en": "Analyze",
+    "th": "ประมวลผล"
+  },
+  "optimize": {
+    "en": "Optimize",
+    "th": "จัดระเบียบ"
+  },
+  "check": {
+    "en": "Check",
+    "th": "ตรวจสอบ"
+  },
+  "repair": {
+    "en": "Repair",
+    "th": "ซ่อมแซม"
+  },
+  "truncate": {
+    "en": "Truncate",
+    "th": "ล้างข้อมูล"
+  },
+  "drop": {
+    "en": "Drop",
+    "th": "ลบข้อมูล"
+  },
+  "move": {
+    "en": "Move",
+    "th": "ย้าย"
+  },
+  "copy": {
+    "en": "Copy",
+    "th": "คัดลอก"
+  },
+  "overwrite": {
+    "en": "overwrite",
+    "th": "แทนที่ข้อมูลเดิม"
+  },
+  "create_view": {
+    "en": "Create view",
+    "th": "สร้างมุมมอง"
+  },
+  "routine": {
+    "en": "Routines",
+    "th": "ชุดคำสั่ง"
+  },
+  "create_procedure": {
+    "en": "Create procedure",
+    "th": "สร้าง procedure"
+  },
+  "create_func": {
+    "en": "Create function",
+    "th": "สร้างฟังก์ชัน"
+  },
+  "events": {
+    "en": "Events",
+    "th": "เหตุการณ์"
+  },
+  "create_event": {
+    "en": "Create event",
+    "th": "สร้างเหตุการณ์"
+  },
+  "bring_bottom": {
+    "en": "Bring to Bottom",
+    "th": "นำไปไว้ด้านล่าง"
+  },
+  "bring_top": {
+    "en": "Bring to Top",
+    "th": "นำไปไว้ด้านบน"
+  },
+  "nodata": {
+    "en": "NO DATA",
+    "th": "ไม่มีข้อมูล"
+  },
+  "inside_user": {
+    "en": "Inside User Management",
+    "th": "ภายในการจัดการผู้ใช้"
+  },
+  "outside_user": {
+    "en": "Outside User Management",
+    "th": "ภายนอกการจัดการผู้ใช้"
+  },
+  "module_detail": {
+    "en": "Module detail",
+    "th": "รายละเอียดโมดูล"
+  },
+  "manage_set": {
+    "en": "Manage your module and configure basic setting.",
+    "th": "จัดการโมดูลและตั้งค่าพื้นฐาน"
+  },
+  "delete_module": {
+    "en": "Delete Module",
+    "th": "ลบโมดูล"
+  },
+  "module_info": {
+    "en": "MODULE INFORMATION",
+    "th": "ข้อมูลโมดูล"
+  },
+  "main_usertype": {
+    "en": "Main User type for use on this module , If you add user in this module user will be used this user type.",
+    "th": "ประเภทผู้ใช้งานหลักในโมดูลนี้ หากมีการเพิ่มผู้ใช้งานเข้ามาใหม่ ประเภทผู้ใช้งานของคน ๆ นั้น จะเปลี่ยนเป็นประเภทผู้ใช้งานในโมดูลนี้ทันที"
+  },
+  "seperate_owner": {
+    "en": "Separate Ownership function, Once you activate this function user in this module will be subordinate with Ownership user type.",
+    "th": "แยกฟังก์ชันสำหรับเจ้าของ เมื่อเปิดใช้งานฟังก์ชันนี้แล้ว ผู้ใช้งานโมดูลนี้จะอยู่ภายใต้การดูแลตามประเภทผู้ใช้งานของเจ้าของ"
+  },
+  "user_leader": {
+    "en": "User Leader of user in this module. Can add, edit, view or delete user data in this module but don't have permission to view other ownership subordinate data",
+    "th": "หัวหน้าหลักของผู้ใช้งานโมดูลนี้ สามารถเพิ่ม แก้ไข ดูและลบข้อมูลผู้ใช้งานในโมดูลนี้ได้ แต่จะไม่ได้รับอนุญาตให้ดูข้อมูลของผู้ใช้งานที่อยู่ภายใต้การดูแลของหัวหน้าคนอื่น ๆ"
+  },
+  "delete_sure": {
+    "en": "Are you sure to delete {{Module}} from this program. Enter your password for make sure, it will be alert action.",
+    "th": "คุณแน่ใจหรือไม่ว่าต้องการลบ {{Module}} ออกจากโปรแกรม กรุณากรอกรหัสผ่านเพื่อดำเนินการ"
+  },
+  "mr": {
+    "en": "Mr.",
+    "th": "นาย"
+  },
+  "mrs": {
+    "en": "Mrs.",
+    "th": "นาง"
+  },
+  "ms": {
+    "en": "Ms.",
+    "th": "นางสาว"
+  },
+  "first_name": {
+    "en": "First Name",
+    "th": "ชื่อจริง"
+  },
+  "tags": {
+    "en": "Tags",
+    "th": "แท็ก"
+  },
+  "add_firstuser": {
+    "en": "ADD FIRST USER ON MODULE",
+    "th": "เพิ่มผู้ใช้งานคนแรกในโมดูล"
+  },
+  "clear": {
+    "en": "clear",
+    "th": "ล้าง"
+  },
+  "clear_log": {
+    "en": "Clear {{type}} LOG",
+    "th": "ล้าง LOG {{type}}"
+  },
+  "issue_found": {
+    "en": "Issue found",
+    "th": "เจอประเด็น"
+  },
+  "view_details": {
+    "en": "View Details",
+    "th": "ดูรายละเอียด"
+  },
+  "view_json": {
+    "en": "View JSON",
+    "th": "ดู JSON"
+  },
+  "link": {
+    "en": "Link",
+    "th": "ลิงก์"
+  },
+  "source": {
+    "en": "Source",
+    "th": "ตำแหน่งไฟล์"
+  },
+  "show_json": {
+    "en": "SHOW JSON",
+    "th": "แสดง JSON"
+  },
+  "areyousure": {
+    "en": "Are you sure?",
+    "th": "คุณแน่ใจหรือไม่?"
+  },
+  "yes_imsure": {
+    "en": "Yes I'm Sure",
+    "th": "ใช่ ฉันแน่ใจ"
+  },
+  "clear_all_logs": {
+    "en": "Are your sure to “Clear all {{type}} LOG” in this system.",
+    "th": "คุณแน่ใจหรือไม่ว่าต้องการ “Clear all {{type}} LOG” ออกจากระบบ"
+  },
+  "delete_log": {
+    "en": "Delete LOG {{type}} that looks like this LOG",
+    "th": "ลบ LOG {{type}} ที่เหมือนกับ LOG นี้"
+  },
+  "perfomance_dashboard": {
+    "en": "Perfomance dashboard",
+    "th": "แดชบอร์ดประสิทธิภาพการทำงาน"
+  },
+  "areusure": {
+    "en": "ARE YOU SURE",
+    "th": "คุณแน่ใจหรือไม่"
+  },
+  "task_type_report": {
+    "en": "Task type report",
+    "th": "รายงานประเภทงาน"
+  },
+  "delete_data": {
+    "en": "Delete data",
+    "th": "ลบข้อมูล"
+  },
+  "page_name": {
+    "en": "Page name",
+    "th": "ชื่อหน้า"
+  },
+  "last_edited": {
+    "en": "Last Edited",
+    "th": "แก้ไขล่าสุด"
+  },
+  "change_pass": {
+    "en": "Change Password",
+    "th": "เปลี่ยนรหัสผ่าน"
+  },
+  "confirm_new_password": {
+    "en": "Confirm new password",
+    "th": "ยืนยันรหัสผ่านใหม่"
+  },
+  "save_1": {
+    "en": "Save",
+    "zh": "節省",
+    "th": "บันทึก"
+  },
+  "list": {
+    "en": "list(s)",
+    "zh": "名單",
+    "th": "รายการ"
+  },
+  "password_doesnt_match": {
+    "en": "Passwords do not match",
+    "th": "รหัสผ่านไม่ตรงกัน"
+  },
+  "default_permission": {
+    "en": "Default permission",
+    "th": "สิทธิ์เริ่มต้น"
+  },
+  "stop": {
+    "en": "Stop",
+    "th": "หยุด"
+  },
+  "to": {
+    "en": "to",
+    "th": "ถึง"
+  },
+  "fill_in": {
+    "en": "Fill in",
+    "zh": "填寫",
+    "th": "กรอก"
+  }
+}

@@ -144,7 +144,7 @@ if ($_POST) {
             <div>
               คุณแน่ใจหรือไม่ที่จะ <span class="text-danger">ไม่ให้ผ่านการทดลองงาน</span> แก่
             </div>
-            <div class="fw-semibold mb-10px" name="{user_fullname}"></div>
+            <div class="fw-semibold mb-10px" name="{full_name}"></div>
           </div>
 
           <div class="row mb-5px">
@@ -195,8 +195,6 @@ if ($_POST) {
           d.page_no = page_no;
           d.page_size = page_size;
           d.status = `<?= $status ?>`;
-          d.filter_from_date = `<?= $filter_from_date ?>`;
-          d.filter_to_date = `<?= $filter_to_date ?>`;
         }
       },
       columns: [{

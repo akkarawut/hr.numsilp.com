@@ -1,0 +1,14 @@
+{
+  "version": {
+    "full": "1.0.365",
+    "main": "1",
+    "minor": "0",
+    "bugfix": "365"
+  },
+  "datetime": "2023-11-24 17:50:47",
+  "latest_commit": {
+    "hash": "4b850c71",
+    "author": "akkarawut",
+    "message": "[FIX] gitignore"
+  }
+}

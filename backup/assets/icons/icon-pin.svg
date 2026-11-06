@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_95335" data-name="Group 95335" transform="translate(-200 -195)">
+    <g id="Rectangle_191" data-name="Rectangle 191" transform="translate(200 195)" fill="none" stroke="#5f707c" stroke-width="1.5">
+      <rect width="20" height="20" rx="5" stroke="none"/>
+      <rect x="0.75" y="0.75" width="18.5" height="18.5" rx="4.25" fill="none"/>
+    </g>
+    <g id="Ellipse_1319" data-name="Ellipse 1319" transform="translate(203 203)" fill="none" stroke="#5f707c" stroke-width="1">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1324" data-name="Ellipse 1324" transform="translate(203 208)" fill="none" stroke="#5f707c" stroke-width="1">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1320" data-name="Ellipse 1320" transform="translate(208 203)" fill="none" stroke="#5f707c" stroke-width="1">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1323" data-name="Ellipse 1323" transform="translate(208 208)" fill="none" stroke="#5f707c" stroke-width="1">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1321" data-name="Ellipse 1321" transform="translate(213 203)" fill="none" stroke="#5f707c" stroke-width="1">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.5" fill="none"/>
+    </g>
+    <g id="Ellipse_1322" data-name="Ellipse 1322" transform="translate(213 208)" fill="none" stroke="#5f707c" stroke-width="1">
+      <circle cx="2" cy="2" r="2" stroke="none"/>
+      <circle cx="2" cy="2" r="1.5" fill="none"/>
+    </g>
+  </g>
+</svg>

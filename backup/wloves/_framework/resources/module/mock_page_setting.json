@@ -1,0 +1,132 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "order": "1",
+      "name": "ชื่อ",
+      "db_column_name": "name",
+      "type": "srtingandnum",
+      "input": {
+        "width": "100%",
+        "font_size": "16px",
+        "color": "#000",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        },
+        "inner": {
+          "font_size": "16px",
+          "color": "#000",
+          "style": {
+            "bold": true,
+            "italic": true,
+            "underline": true
+          }
+        }
+      },
+      "placeholder": {
+        "text": "",
+        "is_placeholder": true,
+        "font_size": "16px",
+        "color": "#333"
+      },
+      "text": {
+        "font_size": "16px",
+        "color": "#333",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        },
+        "text_align": "left"
+      },
+      "limit": "0",
+      "position": "left",
+      "display_width": "100%",
+      "type_display": "left_right"
+    },
+    {
+      "id": "2",
+      "order": "2",
+      "name": "เบอร์โทรศัพท์",
+      "db_column_name": "name",
+      "type": "srtingandnum",
+      "input": {
+        "width": "100%",
+        "font_size": "16px",
+        "color": "#000",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        }
+      },
+      "placeholder": {
+        "is_placeholder": true,
+        "font_size": "16px",
+        "color": "#333",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        }
+      },
+      "text": {
+        "font_size": "16px",
+        "color": "#333",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        },
+        "text_align": "left"
+      },
+      "limit": "0",
+      "position": "left",
+      "display_width": "100%",
+      "type_display": "left_right"
+    },
+    {
+      "id": "3",
+      "order": "3",
+      "name": "อีเมล",
+      "db_column_name": "name",
+      "type": "srtingandnum",
+      "input": {
+        "width": "100%",
+        "font_size": "16px",
+        "color": "#000",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        }
+      },
+      "placeholder": {
+        "is_placeholder": true,
+        "font_size": "16px",
+        "color": "#333",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        }
+      },
+      "text": {
+        "font_size": "16px",
+        "color": "#333",
+        "style": {
+          "bold": true,
+          "italic": true,
+          "underline": true
+        },
+        "text_align": "left"
+      },
+      "limit": "0",
+      "position": "left",
+      "display_width": "100%",
+      "type_display": "left_right"
+    }
+  ]
+}

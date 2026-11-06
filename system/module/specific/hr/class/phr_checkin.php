@@ -45,6 +45,7 @@ class Phr_checkin
         $u_set_checkout_data = [
           'status'             => 'success',
           'checkout_time'      => '23:59:59',
+          'checkout_datetime'  => $checkout_datetime, // เดิมไม่ได้บันทึก ทำให้ตารางแสดงเวลาออกเป็น --:--
           'checkout_branch_id' => isset($user_list[$record['user_id']]) ? $user_list[$record['user_id']]['branch_id'] : 0,
           'working_day'        => $interval->days,
           'working_hour'       => $interval->h,
@@ -60,10 +61,11 @@ class Phr_checkin
     // missing auto
     $working_time_list = Amst::select($code . '_setting_working_time', '*', []);
 
+    // หาวันหยุดที่ครอบคลุม $date_before (เดิมเงื่อนไขกลับด้าน เจอเฉพาะวันหยุดวันเดียว)
     $where = [
       'AND' => [
-        'from_date[>=]' => $date_before,
-        'to_date[<=]'   => $date_before
+        'from_date[<=]' => $date_before,
+        'to_date[>=]'   => $date_before
       ]
     ];
     $holiday_list = Amst::select($code . '_setting_holiday', '*', $where);
@@ -241,7 +243,8 @@ class Phr_checkin
 
     if (isset($where['user_id']) && $where['user_id']) {
       $sql_where['AND']['user_id'] = $where['user_id'];
-      $sql_where['AND']['status_confirm[!]'] = ['draft_leave_work'];
+      // draft_leave_work เป็นค่าของ status_checkin ไม่ใช่ status_confirm
+      $sql_where['AND']['status_checkin[!]'] = ['draft_leave_work'];
     }
 
     if (isset($where['date']) && $where['date']) {
@@ -555,7 +558,8 @@ class Phr_checkin
 
         $checkout_datetime = $data['date'] . ' ' . $data['time'];
 
-        $interval = Phr_helper::calDiffDatetime($model['checkin_datetime'], $model['checkout_datetime']);
+        // ใช้เวลา checkout ที่เพิ่งได้มา (ค่าใน DB ยังว่างอยู่)
+        $interval = Phr_helper::calDiffDatetime($model['checkin_datetime'], $checkout_datetime);
         $total_working_time = str_pad($interval->h, 2, '0', STR_PAD_LEFT) . ':' . str_pad($interval->i, 2, '0', STR_PAD_LEFT) . ':' . str_pad($interval->s, 2, '0', STR_PAD_LEFT);
 
         $u_data = [
@@ -636,7 +640,8 @@ class Phr_checkin
         //   return Amst::repError('E0000', 'Checkin is already.');
         // }
 
-        Amst::update($code . '_checkin', ['is_last' => 0], ['date' => $data['date']]);
+        // ต้องจำกัดเฉพาะพนักงานคนนี้ เดิมล้าง is_last ของทุกคนในวันนั้น
+        Amst::update($code . '_checkin', ['is_last' => 0], ['AND' => ['date' => $data['date'], 'user_id' => $data['user_id']]]);
       }
 
       $i_log_data_list = [];
@@ -661,7 +666,7 @@ class Phr_checkin
         'user_id'              => $data['user_id'],
         'working_time_type_id' => $check_user['working_time_type_id'],
         'date'                 => $data['date'],
-        'time'                 => $data['time'],
+        'time'                 => $data['time_end'], // เช็ค OT จากเวลาออกงาน ไม่ใช่เวลาเข้างาน
         'day_name'             => $day_name,
       ];
       $is_overtime = static::handleCheckOutOverTime($code, $data_check_overtime);
@@ -673,7 +678,7 @@ class Phr_checkin
         // check in
         'user_id'             => $data['user_id'],
         'type'                => $data['type'],
-        'status'              => 'is_progress',
+        'status'              => 'success', // ลงย้อนหลังมีทั้งเวลาเข้า-ออกแล้ว (เดิมสะกดผิดเป็น is_progress)
         'status_checkin'      => $return_checklate['status'],
         'status_confirm'      => 'waiting_confirm', // default status
         'day_name'            => $day_name,
@@ -769,7 +774,8 @@ class Phr_checkin
     $working_time_type_id = $data['working_time_type_id'];
     $working_time_info    = Amst::getByID($code . '_setting_working_time', '*', $working_time_type_id);
     if (!isset($working_time_info['id'])) {
-      return false;
+      // ไม่มีกะงาน -> คืนค่า default แทน false เพราะผู้เรียกอ่าน ['status'] ต่อทันที
+      return $return;
     }
 
     $default_setting_date = $data['date'] . ' ' . $working_time_info[$data['day_name'] . '_fromtime'];
@@ -786,6 +792,10 @@ class Phr_checkin
 
       $total_minutes = ($interval->days * 24 * 60) + ($interval->h * 60) + $interval->i;
       $late_minute   = ($interval_late->days * 24 * 60) + ($interval_late->h * 60) + $interval_late->i;
+      // เข้างานก่อนหมดเวลาผ่อนผัน -> diff() คืนค่าสัมบูรณ์ ต้องไม่นับเป็นนาทีที่สาย
+      if ($interval_late->invert) {
+        $late_minute = 0;
+      }
 
       $key_check_time_late = [
         'late_minute',
@@ -1075,11 +1085,13 @@ class Phr_checkin
       'ธันวาคม'
     ];
 
-    $month = date('m', strtotime($date));
+    // ใช้ int เพราะ '05' ไม่ถูกแปลงเป็น key 5 ของ array
+    $month = (int)date('n', strtotime($date));
     $month_name = isset($month_arr[$month]) ? $month_arr[$month] : '';
     $return['month_name'] = $month_name;
 
-    $year = date('Y');
+    // ใช้ปีของวันที่ที่เลือก ไม่ใช่ปีปัจจุบัน
+    $year = (int)date('Y', strtotime($date));
     $month_day_amount = cal_days_in_month(CAL_GREGORIAN, $month, $year);
     $return['month_day_amount'] = $month_day_amount;
 
@@ -1228,6 +1240,7 @@ class Phr_checkin
           'user_id'        => $record['id'],
           'status_checkin' => ['late', 'very_late'],
           'status_confirm' => 'approved',
+          'is_last'        => 1, // ไม่รวมรายการที่ถูกแทนด้วยการลงย้อนหลังแล้ว
         ]
       ];
       if (isset($where['date']) && $where['date']) {

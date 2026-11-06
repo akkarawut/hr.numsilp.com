@@ -1985,4 +1985,122 @@ select {
   .notification {
     display: none !important;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* ==========================================================================
+   Loading ตอนเปลี่ยนหน้า (แบบจุดเด้ง 3 จุด บนพื้นหรี่จอแบบเดิม)
+   - override หน้าตาของ #loading ที่ framework (w.loadingPage) สร้างตอนกดลิงก์
+   - ไม่แก้ไฟล์ framework เพราะใช้ร่วมกับโปรเจกต์อื่น
+   - เขียนเป็น CSS ล้วน (ใช้ได้ทั้ง .scss และ .css) ถ้าแก้ไฟล์นี้ต้อง compile main.scss ใหม่
+   - markup ของ framework มีแค่ .loading__icon กับ .loading-text จึงสร้าง 3 จุดจาก
+     ::before (จุดซ้าย), background (จุดกลาง), ::after (จุดขวา)
+   ========================================================================== */
+
+/* พื้นหลังหรี่จอแบบ loading เดิมของระบบ + ค่อยๆ โผล่ (หน่วงเล็กน้อย กันกระพริบเวลาหน้าโหลดเร็ว) */
+body #loading .loading__page {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  -webkit-backdrop-filter: brightness(0.3);
+  backdrop-filter: brightness(0.3);
+  animation: hr-loading-fade 0.25s ease 0.12s both;
+}
+
+/* กล่องกลาง: ไม่มีการ์ด แค่จัดจุดกับข้อความเรียงลงมา */
+body #loading .loading__page .loading__div {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ตัวกล่อง 3 จุด (กว้างพอสำหรับ 3 จุด สูงพอให้จุดเด้งขึ้น) */
+body #loading .loading__page .loading__div .loading__icon {
+  position: relative;
+  width: 52px;
+  height: 24px;
+  border: 0;
+  border-radius: 0;
+  /* จุดกลาง = background วงกลม เลื่อนขึ้นลงด้วย background-position */
+  background: radial-gradient(circle, #5a8cf0 5.5px, transparent 6px) no-repeat;
+  background-size: 12px 12px;
+  background-position: 50% 100%;
+  animation: hr-loading-mid 1s ease-in-out 0.15s infinite;
+}
+
+/* จุดซ้ายและขวา */
+body #loading .loading__page .loading__div .loading__icon::before,
+body #loading .loading__page .loading__div .loading__icon::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  animation: hr-loading-bounce 1s ease-in-out infinite;
+}
+body #loading .loading__page .loading__div .loading__icon::before {
+  left: 0;
+  background: var(--v2-color-primary, #3872e1);
+}
+body #loading .loading__page .loading__div .loading__icon::after {
+  right: 0;
+  background: #7aa7ff;
+  animation-delay: 0.3s;
+}
+
+/* ข้อความ: ซ่อน "Loading..." เดิม แล้วแสดงภาษาไทย */
+body #loading .loading__page .loading__div .loading-text {
+  margin: 0;
+  font-size: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+body #loading .loading__page .loading__div .loading-text::before {
+  content: "กำลังโหลด";
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* แถบ Pace ด้านบนตอนหน้าใหม่โหลด: ใช้สีเดียวกัน และซ่อน spinner มุมขวาที่ซ้ำกัน */
+.pace .pace-progress {
+  height: 3px;
+  background: var(--v2-color-primary, #3872e1);
+}
+.pace .pace-activity {
+  display: none;
+}
+
+@keyframes hr-loading-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* จุดซ้าย/ขวา เด้งขึ้น 12px */
+@keyframes hr-loading-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.6; }
+  40% { transform: translateY(-12px); opacity: 1; }
+}
+/* จุดกลาง เด้งขึ้นจังหวะเดียวกัน (ขยับด้วย background-position) */
+@keyframes hr-loading-mid {
+  0%, 80%, 100% { background-position: 50% 100%; }
+  40% { background-position: 50% 0%; }
+}
+
+/* ผู้ใช้ที่ตั้งค่าลดการเคลื่อนไหว: ไม่เด้ง เหลือแค่จุดนิ่งกับข้อความ */
+@media (prefers-reduced-motion: reduce) {
+  body #loading .loading__page,
+  body #loading .loading__page .loading__div .loading__icon,
+  body #loading .loading__page .loading__div .loading__icon::before,
+  body #loading .loading__page .loading__div .loading__icon::after {
+    animation: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

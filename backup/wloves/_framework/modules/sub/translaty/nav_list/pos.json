@@ -1,0 +1,154 @@
+{
+  "sale": {
+    "en": "Sale",
+    "th": "การขาย"
+  },
+  "pos_cash": {
+    "en": "Point of Sale / Cash!",
+    "th": "ขายหน้าร้าน / เงินสด"
+  },
+  "issue_taxiv": {
+    "en": "Tax Invoice Isssuance",
+    "th": "ออกใบกำกับภาษี"
+  },
+  "inven_stock": {
+    "en": "Inventory / Stock Page",
+    "th": "คลัง / สต็อกสินค้า"
+  },
+  "stock_manage": {
+    "en": "Stock Management",
+    "th": "จัดการสต็อก"
+  },
+  "prod_manage": {
+    "en": "Product Management / Service",
+    "th": "จัดการข้อมูลสินค้า / บริการ"
+  },
+  "finance_acc": {
+    "en": "Finance and Accounting",
+    "th": "การเงินและบัญชี"
+  },
+  "income_expense": {
+    "en": "Income and Expense Record",
+    "th": "ลงบันทึกรับ-จ่ายเงิน"
+  },
+  "bill_list": {
+    "en": "Bills / Sales History",
+    "th": "รายการบิล / ประวัติการขาย"
+  },
+  "sale_overview": {
+    "en": "General Management",
+    "th": "การจัดการทั่วไป"
+  },
+  "gener_manage": {
+    "en": "Product Management / Service",
+    "th": "จัดการข้อมูลสินค้า / บริการ"
+  },
+  "order_management": {
+    "en": "Order Management",
+    "th": "จัดการออเดอร์"
+  },
+  "service_page": {
+    "en": "Service",
+    "th": "บริการ"
+  },
+  "score_point": {
+    "en": "Score / Point",
+    "th": "แต้ม / คะแนน"
+  },
+  "discount_promotion": {
+    "en": "Discount and Privilege",
+    "th": "ส่วนลด และ สิทธิพิเศษ"
+  },
+  "summary_sale": {
+    "en": "Summary Sales",
+    "th": "สรุปผลการขาย"
+  },
+  "data_analysis": {
+    "en": "Data Analysis",
+    "th": "การวิเคราะห์ข้อมูล"
+  },
+  "prod_managelist": {
+    "en": "Product Management",
+    "th": "จัดการรายการสินค้า"
+  },
+  "cate_manage": {
+    "en": "Category Management",
+    "th": "จัดการหมวดหมู่สินค้า"
+  },
+  "manage_tag_service": {
+    "en": "Tag management for products and services ",
+    "th": "จัดการ Tag สินค้า / บริการ"
+  },
+  "service_management": {
+    "en": "Service management",
+    "th": "จัดการบริการ"
+  },
+  "shop_info": {
+    "en": "Shop information",
+    "th": "ข้อมูลร้านค้า"
+  },
+  "bank_acc": {
+    "en": "Bank Account",
+    "th": "บัญชีธนาคาร"
+  },
+  "setting_sale": {
+    "en": "Sales Setting",
+    "th": "ตั้งค่าการขายสินค้าหน้าร้าน"
+  },
+  "setting_working_suspect": {
+    "en": "Suspect Behavior Setting",
+    "th": "ตั้งค่าการทำงานที่น่าสงสัย"
+  },
+  "service_setting": {
+    "en": "Service Setting",
+    "th": "ตั้งค่าการให้บริการ"
+  },
+  "set_order_movement": {
+    "en": "Set Order Movement",
+    "th": "กำหนดความเคลื่อนไหวออเดอร์"
+  },
+  "delivery_note_tax_invoice": {
+    "en": "Delivery note / Tax invoice",
+    "th": "ใบส่งสินค้า / ใบกำกับภาษี"
+  },
+  "mod_receipt": {
+    "en": "Modified Receipt",
+    "th": "ใบเสร็จแบบย่อ"
+  },
+  "full_receipt": {
+    "en": "Full Receipt",
+    "th": "ใบเสร็จแบบเต็ม"
+  },
+  "sale_history": {
+    "en": "Sales History",
+    "th": "ประวัติการขายสินค้า"
+  },
+  "register_history_service": {
+    "en": "Register History/ Service",
+    "th": "ประวัติการสมัคร / ใช้บริการ"
+  },
+  "sales_stat": {
+    "en": "Sales Statistic",
+    "th": "สถิติการขาย"
+  },
+  "stock_movement": {
+    "en": "Stock Movement",
+    "th": "ความเคลื่อนไหวภายในสต็อก"
+  },
+  "stock_cost": {
+    "en": "Stock Cost",
+    "th": "คำนวณต้นทุนสต็อก"
+  },
+  "suspect_behav_stat": {
+    "en": "Suspect Behavior Statistics",
+    "th": "สถิติการทำงานที่น่าสงสัย"
+  },
+  "default_settings": {
+    "en": "Default Settings",
+    "th": "ตั้งค่าระบบเบื้องต้น"
+  },
+  "print_barcode": {
+    "en": "Print Barcode",
+    "th": "พิมพ์บาร์โค้ด (Barcode)"
+  }
+}

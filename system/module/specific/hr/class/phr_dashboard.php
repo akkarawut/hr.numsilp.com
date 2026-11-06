@@ -63,7 +63,8 @@ class Phr_dashboard
 
       $working_time_millisecond = ($interval->s + $interval->i * 60 + $interval->h * 3600 + $interval->days * 86400) * 1000;
 
-      $working_branch_name = $checkin_info['checkin_branch_name'] ? $checkin_info['checkin_branch_name'] : $checkin_info['checkin_branch_name'];
+      // ถ้าไม่มีสาขาตอนเข้างาน ให้ใช้สาขาตอนออกงานแทน (เดิมทั้งสองฝั่งเป็นค่าเดียวกัน)
+      $working_branch_name = $checkin_info['checkin_branch_name'] ? $checkin_info['checkin_branch_name'] : (isset($checkin_info['checkout_branch_name']) ? $checkin_info['checkout_branch_name'] : '');
       $return['working_branch_name'] = $working_branch_name;
 
       $working_checkin_time = $checkin_info['checkin_datetime'];
